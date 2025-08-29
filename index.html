@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Mateo Liendo</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/portafolio.ico" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <i data-lucide="gamepad-2" class="nav-icon"></i>
+                    <span class="nav-title">Mateo Liendo</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="nav-links">
+                    <button class="nav-link active" data-section="home">Inicio</button>
+                    <button class="nav-link" data-section="about">Sobre Mi</button>
+                    <button class="nav-link" data-section="projects">Proyectos</button>
+                    <button class="nav-link" data-section="contact">Contactos</button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="mobile-menu-btn">
+                    <button class="menu-toggle">
+                        <i data-lucide="menu" class="menu-icon"></i>
+                        <i data-lucide="x" class="close-icon hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav hidden">
+            <div class="mobile-nav-content">
+                <button class="mobile-nav-link active" data-section="home">Inicio</button>
+                <button class="mobile-nav-link" data-section="about">Sobre Mi</button>
+                <button class="mobile-nav-link" data-section="projects">Proyectos</button>
+                <button class="mobile-nav-link" data-section="contact">Contactos</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-card">
+                <h1 class="hero-title">
+                    Desarrollador <span class="hero-accent">Front End</span>
+                </h1>
+                <p class="hero-description">
+                    Creando experiencias digitales innovadoras con tecnologías modernas
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" data-section="projects">Ver Proyectos</button>
+                    <button class="btn btn-outline" data-section="contact">Contactar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">Sobre <span class="text-accent">Mí</span></h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3 class="about-card-title">
+                        <i data-lucide="code" class="card-icon"></i> Experiencia
+                    </h3>
+                    <p class="about-card-text">
+                        Desarrollador Front End con experiencia creando aplicaciones web modernas y
+                        escalables. Especializado en HTML, CSS, JavaScript y tecnologías cloud.
+                    </p>
+                    <div class="skills">
+                        <span class="skill-badge">HTML</span>
+                        <span class="skill-badge">CSS</span>
+                        <span class="skill-badge">JavaScript</span>
+                        <span class="skill-badge">PHP</span>
+                        <span class="skill-badge">MySQL</span>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <h3 class="about-card-title">
+                        <i data-lucide="zap" class="card-icon"></i> Pasión
+                    </h3>
+                    <p class="about-card-text">
+                        Me apasiona crear soluciones tecnológicas que impacten positivamente en la vida de las personas.
+                        Siempre estoy aprendiendo nuevas tecnologías y mejorando mis habilidades para ofrecer la mejor experiencia de usuario.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Mis <span class="text-accent">Proyectos</span></h2>
+            <div class="projects-grid">
+                <!-- Proyecto 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/fobibike.png" alt="Sistema Administrativo">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Sistema Administrativo</h3>
+                        <p class="project-description">Plataforma administrativa sobre una bicicletería para llevar al día sus productos.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">PHP</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="https://github.com/mat0222/bicicleteria" class="btn btn-outline btn-sm" target="_blank">
+                                <i data-lucide="github" class="btn-icon"></i> Código
+                            </a>
+                            <a href="https://mat0222.github.io/bicicleteria/" class="btn btn-primary btn-sm" target="_blank">
+                                <i data-lucide="external-link" class="btn-icon"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/futbolmania.png" alt="Simulador Futbol Manager">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Simulador Futbol Manager</h3>
+                        <p class="project-description">Web diseñada para sentirte un verdadero Manager de futbol profesional.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">PHP</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="https://github.com/mat0222/Futmania" class="btn btn-outline btn-sm" target="_blank">
+                                <i data-lucide="github" class="btn-icon"></i> Código
+                            </a>
+                            <a href="https://mat0222.github.io/Futmania/" class="btn btn-primary btn-sm" target="_blank">
+                                <i data-lucide="external-link" class="btn-icon"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/funkoshop.png" alt="Simulador E-Commerce">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Simulador E-Commerce</h3>
+                        <p class="project-description">Simulación de E-Commerce de ventas de Funko Pop con sistema de compra y recibo.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="https://github.com/mat0222/funko-shop" class="btn btn-outline btn-sm" target="_blank">
+                                <i data-lucide="github" class="btn-icon"></i> Código
+                            </a>
+                            <a href="https://mat0222.github.io/funko-shop/" class="btn btn-primary btn-sm" target="_blank">
+                                <i data-lucide="external-link" class="btn-icon"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">¿Trabajamos <span class="text-accent">Juntos?</span></h2>
+            <p class="contact-description">Estoy disponible para nuevos proyectos y oportunidades de colaboración</p>
+            <div class="contact-card">
+                <div class="contact-buttons">
+                    <a href="mailto:mateoliendo022@gmail.com?subject=Contacto%20desde%20tu%20portafolio"
+                       class="btn btn-primary btn-lg">
+                        <i data-lucide="mail" class="btn-icon"></i> Gmail
+                    </a>
+                    <a href="https://www.linkedin.com/in/mateo-liendo-8897ba378" target="_blank" class="btn btn-outline btn-lg">
+                        <i data-lucide="link" class="btn-icon"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/mat0222" target="_blank" class="btn btn-outline btn-lg">
+                        <i data-lucide="github" class="btn-icon"></i> GitHub
+                    </a>
+                    <a href="curriculum.html" target="_blank" class="btn btn-secondary btn-lg">
+                        <i data-lucide="file-user" class="btn-icon"></i> Ver CV
+                    </a>
+                    <a href="https://wa.me/5493573414204?text=Hola%20Mateo,%20vi%20tu%20portafolio%20y%20me%20gustaría%20hablar%20contigo"
+                       target="_blank" class="btn btn-accent btn-lg">
+                        <i data-lucide="phone" class="btn-icon"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2025 Portfolio.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
