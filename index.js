@@ -315,6 +315,7 @@ function handleDemoClick(projectTitle, btn) {
     "Football Manager Web": "https://mat0222.github.io/Futmania/",
     "Funko Pop E-Commerce Simulation": "https://mat0222.github.io/funko-shop/",
     "Info-Play": "https://mat0222.github.io/info-play/",
+    "Casla-Info": "https://mat0222.github.io/casla-info/",
     // Agregá más títulos con URLs según quieras
   };
 
