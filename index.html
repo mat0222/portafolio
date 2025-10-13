@@ -3,82 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liendo Mateo - Desarrollador Web</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="icon" type="image/png" href="imagenes/portafolio.ico" />
+    <title>Mateo Liendo - Mi Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Desarrollador Web especializado en crear soluciones web innovadoras y escalables.">
+    <meta name="keywords" content="desarrollador web, programación">
+    <meta name="author" content="Mateo Liendo">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Mateo Liendo - Desarrollador Web">
+    <meta property="og:description" content="Desarrollador Web especializado en crear soluciones web innovadoras y escalables.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="imagenes/logo.png">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mateo Liendo - Desarrollador Web">
+    <meta name="twitter:description" content="Desarrollador Web especializado en crear soluciones web innovadoras y escalables.">
+    
+    <!-- Added Font Awesome 6.0.0 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="imagenes/logo.ico" type="image/png">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="nav" id="nav">
         <div class="nav-container">
-            <div class="nav-logo">
-                <i class="fas fa-code"></i>
-                <span>Liendo Mateo</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#inicio" class="nav-link">Inicio</a></li>
-                <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
-                <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
-                <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            <a href="#" class="nav-logo">
+                <img src="imagenes/logo.png" alt="ML Programación Logo" class="logo-img">
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" class="nav-link" data-es="Inicio" data-en="Home">Inicio</a></li>
+                <li><a href="#servicios" class="nav-link" data-es="Servicios" data-en="Services">Servicios</a></li>
+                <li><a href="#sobre-mi" class="nav-link" data-es="Sobre mí" data-en="About">Sobre mí</a></li>
+                <li><a href="#habilidades" class="nav-link" data-es="Habilidades" data-en="Skills">Habilidades</a></li>
+                <li><a href="#proyectos" class="nav-link" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
+                <li><a href="#contacto" class="nav-link" data-es="Contacto" data-en="Contact">Contacto</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </nav>
+
+    <!-- Language Toggle -->
+    <button class="language-toggle" id="languageToggle" aria-label="Toggle language">
+        <!-- Replaced text with Font Awesome globe icon -->
+        <i class="fas fa-globe"></i>
+        <span class="lang-text">ES</span>
+    </button>
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        <span class="introducing">PRESENTANDO</span>
-                        <span class="main-title">LIENDO MATEO</span>
-                        <span class="subtitle">DESARROLLADOR WEB</span>
-                    </h1>
-                    <p class="hero-description">
-                        Descubre un mundo de increíbles experiencias digitales
-                    </p>
-                    <button class="cta-button">Explorar</button>
+                <h1 class="hero-title">
+                    <span data-es="Hola, soy" data-en="Hi, I'm">Hola, soy</span>
+                    <span class="hero-name">Mateo Liendo</span>
+                </h1>
+                <div class="hero-subtitle">
+                    <span class="typing-text" id="typingText"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-description" data-es="Transformo ideas en experiencias digitales excepcionales. Especializado en desarrollo full stack con tecnologías modernas." data-en="I transform ideas into exceptional digital experiences. Specialized in full stack development with modern technologies.">
+                    Transformo ideas en experiencias digitales excepcionales. Especializado en desarrollo web con tecnologías modernas.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#proyectos" class="btn btn-primary" data-es="Ver Proyectos" data-en="View Projects">Ver Proyectos</a>
+                    <a href="servicio.html" class="btn btn-secondary" data-es="Mis Servicios" data-en="My Services">
+                        <i class="fas fa-briefcase"></i> Mis Servicios
+                    </a>
+                    <a href="#contacto" class="btn btn-secondary" data-es="Contáctame" data-en="Contact Me">Contáctame</a>
+                    <a href="curriculum.html" class="btn btn-secondary" data-es="CV" data en="CV">
+                        <i class="fa-solid fa-file"></i> CV
+                    </a>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="floating-shape shape-1"></div>
-                <div class="floating-shape shape-2"></div>
-                <div class="floating-shape shape-3"></div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="imagenes/fotoperfil.jpeg" alt="Matías Lencina" class="profile-image">
+                </div>
             </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
         </div>
     </section>
 
-    <!-- Services Grid -->
-    <section class="services-grid">
+    <!-- Services Section -->
+    <section id="servicios" class="services">
         <div class="container">
-            <h2 class="section-title">Explora</h2>
-            <div class="grid">
-                <div class="service-card" data-service="frontend">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3>FRONTEND</h3>
+            <h2 class="section-title" data-es="Servicios" data-en="Services">Servicios</h2>
+            <p class="section-subtitle" data-es="Soluciones completas para tus necesidades digitales" data-en="Complete solutions for your digital needs">
+                Soluciones completas para tus necesidades digitales
+            </p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <!-- Replaced emoji with Font Awesome icon -->
+                    <div class="service-icon"><i class="fas fa-code"></i></div>
+                    <h3 class="service-title" data-es="Desarrollo Web" data-en="Web Development">Desarrollo Web</h3>
+                    <p class="service-description" data-es="Sitios web modernos, responsivos y optimizados para SEO" data-en="Modern, responsive websites optimized for SEO">
+                        Sitios web modernos, responsivos y optimizados para SEO
+                    </p>
                 </div>
-                <div class="service-card" data-service="backend">
-                    <i class="fas fa-server"></i>
-                    <h3>BACKEND</h3>
+                <div class="service-card">
+                    <!-- Replaced emoji with Font Awesome icon -->
+                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3 class="service-title" data-es="Aplicaciones Web" data-en="Web Applications">Aplicaciones Web</h3>
+                    <p class="service-description" data-es="Aplicaciones web escalables con las últimas tecnologías" data-en="Scalable web applications with the latest technologies">
+                        Aplicaciones web escalables con las últimas tecnologías
+                    </p>
                 </div>
-                <div class="service-card" data-service="responsive">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>RESPONSIVE</h3>
+                <div class="service-card">
+                    <!-- Replaced emoji with Font Awesome icon -->
+                    <div class="service-icon"><i class="fas fa-palette"></i></div>
+                    <h3 class="service-title" data-es="UI/UX Design" data-en="UI/UX Design">UI/UX Design</h3>
+                    <p class="service-description" data-es="Diseños intuitivos centrados en la experiencia del usuario" data-en="Intuitive designs focused on user experience">
+                        Diseños intuitivos centrados en la experiencia del usuario
+                    </p>
                 </div>
-                <div class="service-card" data-service="optimization">
-                    <i class="fas fa-rocket"></i>
-                    <h3>OPTIMIZACIÓN</h3>
-                </div>
-                <div class="service-card" data-service="maintenance">
-                    <i class="fas fa-tools"></i>
-                    <h3>MANTENIMIENTO</h3>
+                <div class="service-card">
+                    <!-- Replaced emoji with Font Awesome icon -->
+                    <div class="service-icon"><i class="fas fa-rocket"></i></div>
+                    <h3 class="service-title" data-es="Optimización" data-en="Optimization">Optimización</h3>
+                    <p class="service-description" data-es="Mejora del rendimiento y velocidad de carga" data-en="Performance and loading speed improvement">
+                        Mejora del rendimiento y velocidad de carga
+                    </p>
                 </div>
             </div>
         </div>
@@ -87,27 +140,32 @@
     <!-- About Section -->
     <section id="sobre-mi" class="about">
         <div class="container">
+            <h2 class="section-title" data-es="Sobre mí" data-en="About Me">Sobre mí</h2>
             <div class="about-content">
+                <div class="about-image">
+                    <img src="imagenes/fotoperfil.jpeg" alt="Matías Lencina" loading="lazy">
+                </div>
                 <div class="about-text">
-                    <h2 class="section-title">Sobre Mí</h2>
-                    <p>
-                        Soy Liendo Mateo, un desarrollador web apasionado por crear experiencias digitales 
-                        excepcionales. Con experiencia en tecnologías modernas, me especializo en desarrollar 
-                        aplicaciones web robustas y escalables.
+                    <p data-es="Soy Mateo Liendo, desarrollador web junior con una gran pasión por crear interfaces funcionales y atractivas. Actualmente estudio React en Coderhouse, buscando mejorar cada día en el mundo del frontend, aunque también disfruto trabajar en el backend." data-en="I'm Mateo Liendo, a junior web developer with a strong passion for creating functional and visually appealing interfaces. I'm currently studying React at Coderhouse, constantly improving my skills in the frontend world, although I also enjoy working on the backend.">
+                        Soy Mateo Liendo, desarrollador web junior con una gran pasión por crear interfaces funcionales y atractivas. Actualmente estudio React en Coderhouse, buscando mejorar cada día en el mundo del frontend, aunque también disfruto trabajar en el backend.
                     </p>
-                    <p>
-                        Mi enfoque se centra en escribir código limpio, crear interfaces intuitivas y 
-                        optimizar el rendimiento para ofrecer la mejor experiencia de usuario posible.
+                    <p data-es="Manejo HTML, CSS, JavaScript y SQL, y tengo conocimientos básicos de Android, área en la que quiero seguir creciendo. Me motiva aprender, experimentar y construir proyectos que generen impacto real." data-en="I work with HTML, CSS, JavaScript, and SQL, and have basic knowledge of Android development, an area where I’m eager to keep growing. I’m driven by the desire to learn, experiment, and build projects that make a real impact.">
+                        Manejo HTML, CSS, JavaScript y SQL, y tengo conocimientos básicos de Android, área en la que quiero seguir creciendo. Me motiva aprender, experimentar y construir proyectos que generen impacto real.
                     </p>
                 </div>
-                <div class="about-visual">
-                    <div class="profile-card">
-                        <div class="profile-image">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <h3>Liendo Mateo</h3>
-                        <p>Desarrollador Web</p>
-                    </div>
+            </div>
+            <div class="about-stats">
+                <div class="stat">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label" data-es="Proyectos Completados" data-en="Completed Projects">Proyectos Completados</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">Junior</div>
+                    <div class="stat-label" data-es="Años de Experiencia" data-en="Years of Experience">Años de Experiencia</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label" data-es="Satisfacción del Cliente" data-en="Client Satisfaction">Satisfacción del Cliente</div>
                 </div>
             </div>
         </div>
@@ -116,65 +174,122 @@
     <!-- Skills Section -->
     <section id="habilidades" class="skills">
         <div class="container">
-            <h2 class="section-title">Habilidades</h2>
+            <h2 class="section-title" data-es="Habilidades Técnicas" data-en="Technical Skills">Habilidades Técnicas</h2>
+            <p class="section-subtitle" data-es="Tecnologías y herramientas que domino" data-en="Technologies and tools I master">
+                Tecnologías y herramientas que domino
+            </p>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Frontend</h3>
+                    <h3 class="skill-category-title">Frontend</h3>
                     <div class="skill-items">
                         <div class="skill-item">
-                            <i class="fab fa-html5"></i>
-                            <span>HTML</span>
+                            <div class="skill-header">
+                                <span class="skill-name">HTML/CSS</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
                         </div>
                         <div class="skill-item">
-                            <i class="fab fa-css3-alt"></i>
-                            <span>CSS</span>
+                            <div class="skill-header">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
                         </div>
                         <div class="skill-item">
-                            <i class="fab fa-js-square"></i>
-                            <span>JavaScript</span>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fa-brands fa-php"></i>
-                            <span>Php</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <span>SQL</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fa-brands fa-node-js"></i>
-                            <span>Node.js</span>
+                            <div class="skill-header">
+                                <span class="skill-name">React</span>
+                                <span class="skill-percentage">10%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 10%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Herramientas</h3>
+                    <h3 class="skill-category-title">Backend</h3>
                     <div class="skill-items">
                         <div class="skill-item">
-                            <i class="fab fa-git-alt"></i>
-                            <span>Git</span>
+                            <div class="skill-header">
+                                <span class="skill-name">Node.js</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
                         </div>
                         <div class="skill-item">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub</span>
+                            <div class="skill-header">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percentage">30%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 30%"></div>
+                            </div>
                         </div>
                         <div class="skill-item">
-                            <i class="fas fa-code-branch"></i>
-                            <span>VS Code</span>
+                            <div class="skill-header">
+                                <span class="skill-name">Php</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
                         </div>
                         <div class="skill-item">
-                            <i class="fa-brands fa-android"></i>
-                            <span>Android Studio</span>
+                            <div class="skill-header">
+                                <span class="skill-name">SQL/MySQL</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title" data-es="Herramientas" data-en="Tools">Herramientas</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Git</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Xampp</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Visual Code</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Android Studio</span>
+                                <span class="skill-percentage">20%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 20%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -183,172 +298,68 @@
     </section>
 
     <!-- Projects Section -->
-   <section id="proyectos" class="projects">
-  <div class="container">
-    <h2 class="section-title">Proyectos</h2>
-    <div class="projects-grid">
-
-      <!-- Proyecto 1 -->
-      <div class="project-card">
-        <div class="project-image">
-          <i class="fa-solid fa-user-tie"></i>
+    <section id="proyectos" class="projects">
+        <div class="container">
+            <h2 class="section-title" data-es="Proyectos Destacados" data-en="Featured Projects">Proyectos Destacados</h2>
+            <p class="section-subtitle" data-es="Algunos de mis trabajos más recientes" data-en="Some of my most recent work">
+                Algunos de mis trabajos más recientes
+            </p>
+            <p class="projects-instruction" data-es="Presiona un proyecto para ver más detalles" data-en="Click on a project to see more details">
+                Presiona un proyecto para ver más detalles
+            </p>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be dynamically inserted here -->
+            </div>
         </div>
-        <div class="project-content">
-          <h3>FobiBike - Sistema de Administración de Productos</h3>
-          <p>
-            Un proyecto web que permite la gestión completa de productos para una bicicletería...
-          </p>
-          <div class="project-tech">
-            <span>Html</span>
-            <span>Css</span>
-            <span>JavaScript</span>
-            <span>Php</span>
-            <span>Sql</span>
-            <span>Xampp</span>
-          </div>
-          <button class="demo-btn">
-            <i class="fas fa-external-link-alt"></i> Ver Demo
-          </button>
-        </div>
-      </div>
-
-      <!-- Proyecto 2 -->
-      <div class="project-card">
-        <div class="project-image">
-          <i class="fa-solid fa-gamepad"></i>
-        </div>
-        <div class="project-content">
-          <h3>Football Manager Web</h3>
-          <p>
-            Un proyecto web interactivo que simula la experiencia de ser manager de fútbol...
-          </p>
-          <div class="project-tech">
-            <span>Html</span>
-            <span>Css</span>
-            <span>JavaScript</span>
-            <span>Php</span>
-            <span>Sql</span>
-            <span>Xampp</span>
-          </div>
-          <button class="demo-btn">
-            <i class="fas fa-external-link-alt"></i> Ver Demo
-          </button>
-        </div>
-      </div>
-
-      <!-- Proyecto 3 -->
-      <div class="project-card">
-        <div class="project-image">
-          <i class="fas fa-shopping-cart"></i>
-        </div>
-        <div class="project-content">
-          <h3>Funko Pop E-Commerce Simulation</h3>
-          <p>
-            Un proyecto web que simula una tienda online de Funko Pop...
-          </p>
-          <div class="project-tech">
-            <span>Html</span>
-            <span>Css</span>
-            <span>JavaScript</span>
-          </div>
-          <button class="demo-btn">
-            <i class="fas fa-external-link-alt"></i> Ver Demo
-          </button>
-        </div>
-      </div>
-
-      <!-- Proyecto 4 -->
-      <div class="project-card">
-        <div class="project-image">
-          <i class="fa-solid fa-info"></i>
-        </div>
-        <div class="project-content">
-          <h3>Info-Play</h3>
-          <p>
-            Página web interactiva dedicada a ofrecer información completa sobre PlayStation...
-          </p>
-          <div class="project-tech">
-            <span>Html</span>
-            <span>Css</span>
-            <span>JavaScript</span>
-            <span>Python</span>
-          </div>
-          <button class="demo-btn">
-            <i class="fas fa-external-link-alt"></i> Ver Demo
-          </button>
-        </div>
-      </div>
-
-      <!-- Placeholder -->
-      <div class="project-card">
-        <div class="project-image">
-          <i class="fa-solid fa-futbol"></i>
-        </div>
-        <div class="project-content">
-          <h3>Casla-Info</h3>
-          <p>
-            Página web informativa sobre el club San Lorenzo de Almagro pra conocerlo un poco más...
-          </p>
-          <div class="project-tech">
-            <span>Html</span>
-            <span>Css</span>
-            <span>JavaScript</span>
-          </div>
-          <button class="demo-btn">
-            <i class="fas fa-external-link-alt"></i> Ver Demo
-          </button>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-image">
-          <i class="fa-solid fa-question"></i>
-        </div>
-        <div class="project-content">
-          <h3>Próximamente</h3>
-          <p>...</p>
-          <div class="project-tech"></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- Contact Section -->
     <section id="contacto" class="contact">
         <div class="container">
-            <h2 class="section-title">Contacto</h2>
-            <div class="contact-grid">
-                <div class="contact-card" data-contact="gmail">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Gmail</h3>
-                    <p>mateoliendo022@gmail.com</p>
+            <h2 class="section-title" data-es="Contacto" data-en="Contact">Contacto</h2>
+            <p class="section-subtitle" data-es="¿Tienes un proyecto en mente? ¡Hablemos!" data-en="Have a project in mind? Let's talk!">
+                ¿Tienes un proyecto en mente? ¡Hablemos!
+            </p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div class="contact-details">
+                            <h3>WhatsApp</h3>
+                            <a href="https://wa.me/5493573414204?text=Hola%20Mateo,%20vi%20tu%20portafolio%20y%20me%20gustaría%20hablar%20contigo" target="_blank" rel="noopener noreferrer">+54 9 3573 414204</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <h3>Gmail</h3>
+                            <a href="mailto:mateoliendo022@gmail.com?subject=Contacto%20desde%20tu%20portafolio">mateoliendo022@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-details">
+                            <h3 data-es="Ubicación" data-en="Location">Ubicación</h3>
+                            <p>Argentina</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-card" data-contact="linkedin">
-                    <i class="fab fa-linkedin"></i>
-                    <h3>LinkedIn</h3>
-                    <p>https://www.linkedin.com/in/mateo-liendo02</p>
-                </div>
-                <div class="contact-card" data-contact="github">
-                    <i class="fab fa-github"></i>
-                    <h3>GitHub</h3>
-                    <p>https://github.com/mat0222</p>
-                </div>
-                <div class="contact-card" data-contact="cv">
-                    <i class="fas fa-file-pdf"></i>
-                    <h3>CV Virtual</h3>
-                    <p>Mi CV</p>
-                </div>
-                <div class="contact-card" data-contact="whatsapp">
-                    <i class="fab fa-whatsapp"></i>
-                    <h3>WhatsApp</h3>
-                    <p>+54 9 3573-414204</p>
-                </div>
-                <div class="contact-card" data-contact="services">
-                    <i class="fas fa-briefcase"></i>
-                    <h3>Mis Servicios</h3>
-                    <p>Ver servicios completos</p>
+                <div class="contact-social">
+                    <h3 data-es="Sígueme en" data-en="Follow me on">Sígueme en</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/mat0222" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mateo-liendo02" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://www.youtube.com/@MateoLiendo02" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <i class="fa-brands fa-youtube"></i>
+                            <span>YouTube</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -357,32 +368,45 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Liendo Mateo. Todos los derechos reservados.</p>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="imagenes/logo.png" alt="ML Programación Logo">
+                    <p>Mateo Liendo</p>
+                </div>
+                <div class="footer-links">
+                    <!-- Added Font Awesome icons to social links -->
+                    <a href="https://github.com/mat0222" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mateo-liendo02" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@MateoLiendo02" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mateo Liendo. <span data-es="Todos los derechos reservados." data-en="All rights reserved.">Todos los derechos reservados.</span></p>
+            </div>
         </div>
     </footer>
 
-    <!-- Service Modal -->
-    <div id="serviceModal" class="modal">
+    <!-- Project Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
         <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="modalTitle"></h2>
-                <span class="close-btn">&times;</span>
-            </div>
-            <div class="modal-body">
-                <div class="modal-icon">
-                    <i id="modalIcon"></i>
-                </div>
-                <p id="modalDescription"></p>
-                <div class="modal-features">
-                    <h4>Características:</h4>
-                    <ul id="modalFeatures"></ul>
-                </div>
+            <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal content will be dynamically inserted here -->
             </div>
         </div>
     </div>
 
-   
-
     <script src="index.js"></script>
 </body>
 </html>
+
+
+
+

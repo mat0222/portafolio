@@ -1,226 +1,482 @@
-// Smooth scrolling for navigation links
+// Translations
+const translations = {
+  es: {
+    typing: ["Desarrollador Web", "Creador de Experiencias Web", "Solucionador de Problemas"],
+    projects: [
+      {
+        title: "FobiBike - Sistema de Administración de Productos",
+        description:
+          "Plataforma web para gestionar stock y productos, ideal para optimizar la administración del negocio.",
+        images: [
+          "imagenes/fobibike1.png",
+        ],
+        tags: ["Html", "Css", "JavaScript", "Php", "MySQL"],
+        features: [
+          "Sistema de autenticación seguro",
+          "Control de inventario en tiempo real",
+          "Panel de administración para gestionar productos",
+          "Panel intuitivo para el personal",
+        ],
+        technologies: [
+          "Html",
+          "Css",
+          "JavaScript",
+          "Php",
+          "MySql",
+        ],
+      },
+      {
+        title: "Football Manager Web",
+        description:
+          "Aplicación interactiva que permite agregar, editar y administrar jugadores, con panel de control y estadísticas dinámicas.",
+        images: [
+          "imagenes/futbol1.png",
+          "imagenes/futbol2.png",
+          "imagenes/futbol3.png",
+          "imagenes/futbol4.png",
+          "imagenes/futbol5.png",
+        ],
+        tags: ["Html", "Css", "JavaScript", "Php", "MySQL"],
+        features: [
+          "Inicio de sesión y autenticación segura",
+          "Gestión de datos de jugadores en tiempo real",
+          "Panel de control para organización del equipo",
+          "Interfaz interactiva y adaptable",
+        ],
+         technologies: [
+          "Html",
+          "Css",
+          "JavaScript",
+          "Php",
+          "MySql",
+        ],
+      },
+      {
+        title: "Funko Pop E-Commerce Simulation",
+        description: "Tienda online con catálogo dinámico, carrito de compras y sistema de pagos interactivo.",
+        images: [
+          "imagenes/funko1.png",
+          "imagenes/funko2.png",
+          "imagenes/funko3.png",
+          "imagenes/funko4.png",
+        ],
+        tags: ["HTML", "CSS", "JavaScript"],
+        features: [
+          "Diseño Interactivo",
+          "Simulacion de Carrito de Compras",
+          "Integración de Pasarela de Pago (Simulada)",
+        ],
+        technologies: [
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+        ],
+      },
+      {
+        title: "Info-Play",
+        description:
+          "Página informativa con líneas de tiempo interactivas y cuadros explicativos que muestran la evolución de Sony en el mundo gamer.",
+        images: [
+          "imagenes/ps1.png",
+          "imagenes/ps2.png",
+          "imagenes/ps3.png",
+        ],
+        tags: ["Html", "Css", "JavaScript", "Python"],
+        features: [
+          "Sistema de autenticación seguro",
+          "Generador interactivo de cuadros explicativos",
+          "Línea de tiempo dinámica y visualizaciones",
+        ],
+        technologies: [
+          "Html",
+          "Css",
+          "JavaScript",
+          "Python",
+        ],
+      },
+      {
+        title: "Casla-Info",
+        description:
+          "Portal dedicado a la historia, estadio, jugadores y vías de contacto, diseñado para brindar información clara y atractiva a los hinchas del cuervo",
+        images: [
+          "imagenes/casla1.png",
+          "imagenes/casla2.png",
+          "imagenes/casla3.png",
+          "imagenes/casla4.png",
+        ],
+        tags: ["Html", "Css", "JavaScript"],
+        features: [
+          "Web Informativa",
+          "Secciones interactivas de historia, estadio y contactos",
+          "Galería de jugadores",
+          "Diseño responsivo",
+          "Animaciones con JavaScript",
+        ],
+          technologies: [
+          "Html",
+          "Css",
+          "JavaScript",
+        ],
+      }
+    ],
+  },
+  en: {
+    typing: ["Developer Web", "Web Experience Creator", "Problem Solver"],
+    projects: [
+  {
+    title: "FobiBike - Product Management System",
+    description:
+      "Web platform designed to manage stock and products, ideal for optimizing business administration.",
+    images: [
+      "imagenes/fobibike1.png",
+    ],
+    tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    features: [
+      "Secure authentication system",
+      "Real-time inventory control",
+      "Admin panel for product management",
+      "User-friendly dashboard for staff",
+    ],
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "PHP",
+      "MySQL",
+    ],
+  },
+  {
+    title: "Football Manager Web",
+    description:
+      "Interactive application that allows adding, editing, and managing players with a control panel and dynamic statistics.",
+    images: [
+      "imagenes/futbol1.png",
+      "imagenes/futbol2.png",
+      "imagenes/futbol3.png",
+      "imagenes/futbol4.png",
+      "imagenes/futbol5.png",
+    ],
+    tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    features: [
+      "Secure login and authentication",
+      "Real-time player data management",
+      "Control panel for team organization",
+      "Interactive and responsive interface",
+    ],
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "PHP",
+      "MySQL",
+    ],
+  },
+  {
+    title: "Funko Pop E-Commerce Simulation",
+    description:
+      "Online store with a dynamic catalog, shopping cart, and interactive payment simulation system.",
+    images: [
+      "imagenes/funko1.png",
+      "imagenes/funko2.png",
+      "imagenes/funko3.png",
+      "imagenes/funko4.png",
+    ],
+    tags: ["HTML", "CSS", "JavaScript"],
+    features: [
+      "Interactive design",
+      "Shopping cart simulation",
+      "Simulated payment gateway integration",
+    ],
+    technologies: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+    ],
+  },
+  {
+    title: "Info-Play",
+    description:
+      "Informative website with interactive timelines and explanatory charts showing Sony's evolution in the gaming world.",
+    images: [
+      "imagenes/ps1.png",
+      "imagenes/ps2.png",
+      "imagenes/ps3.png",
+    ],
+    tags: ["HTML", "CSS", "JavaScript", "Python"],
+    features: [
+      "Secure authentication system",
+      "Interactive chart generator",
+      "Dynamic timeline and visualizations",
+    ],
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Python",
+    ],
+  },
+  {
+    title: "Casla-Info",
+    description:
+      "Portal dedicated to the history, stadium, players, and contact information, designed to provide clear and engaging content for fans of the club.",
+    images: [
+      "imagenes/casla1.png",
+      "imagenes/casla2.png",
+      "imagenes/casla3.png",
+      "imagenes/casla4.png",
+    ],
+    tags: ["HTML", "CSS", "JavaScript"],
+    features: [
+      "Informative website",
+      "Interactive sections for history, stadium, and contacts",
+      "Player gallery",
+      "Responsive design",
+      "JavaScript animations",
+    ],
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+    ],
+      }
+    ],
+  },
+}
+
+// Current language
+let currentLang = "es"
+
+// Navigation
+const nav = document.getElementById("nav")
+const navToggle = document.getElementById("navToggle")
+const navMenu = document.getElementById("navMenu")
+const navLinks = document.querySelectorAll(".nav-link")
+
+// Scroll effect for navigation
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    nav.classList.add("scrolled")
+  } else {
+    nav.classList.remove("scrolled")
+  }
+})
+
+// Mobile menu toggle
+navToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("active")
+  navToggle.classList.toggle("active")
+})
+
+// Close mobile menu when clicking on a link
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("active")
+    navToggle.classList.remove("active")
+  })
+})
+
+// Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault()
     const target = document.querySelector(this.getAttribute("href"))
     if (target) {
-      target.scrollIntoView({
+      const offsetTop = target.offsetTop - 80
+      window.scrollTo({
+        top: offsetTop,
         behavior: "smooth",
-        block: "start",
       })
     }
   })
 })
 
-// Mobile menu toggle
-const hamburger = document.querySelector(".hamburger")
-const navMenu = document.querySelector(".nav-menu")
+// Typing effect
+const typingText = document.getElementById("typingText")
+let typingIndex = 0
+let charIndex = 0
+let isDeleting = false
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active")
-  navMenu.classList.toggle("active")
-})
+function typeEffect() {
+  const currentText = translations[currentLang].typing[typingIndex]
 
-// Close mobile menu when clicking on a link
-document.querySelectorAll(".nav-link").forEach((n) =>
-  n.addEventListener("click", () => {
-    hamburger.classList.remove("active")
-    navMenu.classList.remove("active")
-  }),
-)
-
-// Navbar background on scroll
-window.addEventListener("scroll", () => {
-  const navbar = document.querySelector(".navbar")
-  if (window.scrollY > 100) {
-    navbar.style.background = "rgba(26, 26, 26, 0.98)"
+  if (isDeleting) {
+    typingText.textContent = currentText.substring(0, charIndex - 1)
+    charIndex--
   } else {
-    navbar.style.background = "rgba(26, 26, 26, 0.95)"
-  }
-})
-
-// Service cards interaction
-document.querySelectorAll(".service-card").forEach((card) => {
-  card.addEventListener("click", () => {
-    const service = card.dataset.service
-    showServiceDetails(service)
-  })
-})
-
-function showServiceDetails(service) {
-  const services = {
-    frontend: {
-      title: "Desarrollo Frontend",
-      icon: "fas fa-laptop-code",
-      description:
-        "Creación de interfaces de usuario modernas y responsivas utilizando las últimas tecnologías como React, Vue.js y Angular.",
-      features: [
-        "Interfaces responsivas y adaptables",
-        "Optimización para todos los dispositivos",
-        "Animaciones y transiciones suaves",
-        "Integración con APIs REST",
-        "Código limpio y mantenible",
-      ],
-    },
-    backend: {
-      title: "Desarrollo Backend",
-      icon: "fas fa-server",
-      description:
-        "Desarrollo de APIs robustas y escalables con Node.js, Python y bases de datos como MongoDB y PostgreSQL.",
-      features: [
-        "APIs RESTful y GraphQL",
-        "Bases de datos relacionales y NoSQL",
-        "Autenticación y autorización",
-        "Arquitectura escalable",
-        "Documentación completa",
-      ],
-    },
-    fullstack: {
-      title: "Desarrollo Full Stack",
-      icon: "fas fa-layer-group",
-      description: "Soluciones completas que combinan frontend y backend para crear aplicaciones web integrales.",
-      features: [
-        "Aplicaciones web completas",
-        "Integración frontend-backend",
-        "Gestión de estado global",
-        "Deployment y DevOps",
-        "Monitoreo y analytics",
-      ],
-    },
-    responsive: {
-      title: "Diseño Responsive",
-      icon: "fas fa-mobile-alt",
-      description:
-        "Sitios web que se adaptan perfectamente a cualquier dispositivo, desde móviles hasta pantallas de escritorio.",
-      features: [
-        "Mobile-first approach",
-        "Breakpoints optimizados",
-        "Imágenes adaptativas",
-        "Touch-friendly interfaces",
-        "Cross-browser compatibility",
-      ],
-    },
-    optimization: {
-      title: "Optimización Web",
-      icon: "fas fa-rocket",
-      description: "Mejora del rendimiento, SEO y velocidad de carga para una experiencia de usuario excepcional.",
-      features: [
-        "Optimización de velocidad",
-        "SEO técnico avanzado",
-        "Compresión de assets",
-        "Lazy loading implementado",
-        "Core Web Vitals mejorados",
-      ],
-    },
-    maintenance: {
-      title: "Mantenimiento",
-      icon: "fas fa-tools",
-      description:
-        "Soporte continuo, actualizaciones de seguridad y mejoras para mantener tu sitio web funcionando perfectamente.",
-      features: [
-        "Actualizaciones de seguridad",
-        "Backup automático",
-        "Monitoreo 24/7",
-        "Soporte técnico",
-        "Mejoras continuas",
-      ],
-    },
+    typingText.textContent = currentText.substring(0, charIndex + 1)
+    charIndex++
   }
 
-  const serviceInfo = services[service]
-  if (serviceInfo) {
-    showModal(serviceInfo)
+  let typeSpeed = isDeleting ? 50 : 100
+
+  if (!isDeleting && charIndex === currentText.length) {
+    typeSpeed = 2000
+    isDeleting = true
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false
+    typingIndex = (typingIndex + 1) % translations[currentLang].typing.length
+    typeSpeed = 500
   }
+
+  setTimeout(typeEffect, typeSpeed)
 }
 
-function showModal(serviceInfo) {
-  const modal = document.getElementById("serviceModal")
-  const modalTitle = document.getElementById("modalTitle")
-  const modalIcon = document.getElementById("modalIcon")
-  const modalDescription = document.getElementById("modalDescription")
-  const modalFeatures = document.getElementById("modalFeatures")
+typeEffect()
 
-  // Configurar contenido del modal
-  modalTitle.textContent = serviceInfo.title
-  modalIcon.className = serviceInfo.icon
-  modalDescription.textContent = serviceInfo.description
+// Language toggle
+const languageToggle = document.getElementById("languageToggle")
 
-  // Limpiar y agregar características
-  modalFeatures.innerHTML = ""
-  serviceInfo.features.forEach((feature) => {
-    const li = document.createElement("li")
-    li.textContent = feature
-    modalFeatures.appendChild(li)
-  })
+languageToggle.addEventListener("click", () => {
+  currentLang = currentLang === "es" ? "en" : "es"
+  languageToggle.querySelector(".lang-text").textContent = currentLang.toUpperCase()
+  updateLanguage()
+})
 
-  // Mostrar modal
-  modal.style.display = "block"
-  document.body.style.overflow = "hidden" // Prevenir scroll del body
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById("serviceModal")
-  const closeBtn = document.querySelector(".close-btn")
-
-  // Cerrar modal al hacer clic en X
-  closeBtn.addEventListener("click", () => {
-    modal.style.display = "none"
-    document.body.style.overflow = "auto"
-  })
-
-  // Cerrar modal al hacer clic fuera del contenido
-  window.addEventListener("click", (event) => {
-    if (event.target === modal) {
-      modal.style.display = "none"
-      document.body.style.overflow = "auto"
+function updateLanguage() {
+  // Update all elements with data-es and data-en attributes
+  document.querySelectorAll("[data-es][data-en]").forEach((element) => {
+    const text = element.getAttribute(`data-${currentLang}`)
+    if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
+      element.placeholder = text
+    } else if (element.tagName === "BUTTON") {
+      element.textContent = text
+    } else {
+      element.textContent = text
     }
   })
 
-  // Cerrar modal con tecla Escape
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && modal.style.display === "block") {
-      modal.style.display = "none"
-      document.body.style.overflow = "auto"
-    }
-  })
-})
+  // Update projects
+  renderProjects()
 
-// Contact cards interaction
-document.querySelectorAll(".contact-card").forEach((card) => {
-  card.addEventListener("click", () => {
-    const contact = card.dataset.contact
-    handleContactClick(contact)
-  })
-})
-
-document.querySelectorAll(".demo-btn").forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    e.stopPropagation(); // Prevenir que se active el evento del card padre
-    const projectCard = btn.closest(".project-card");
-    const projectTitle = projectCard.querySelector("h3").textContent;
-    handleDemoClick(projectTitle, btn);
-  });
-});
-
-
-function handleContactClick(contact) {
-  const contacts = {
-    gmail: () => window.open("mailto:mateoliendo022@gmail.com?subject=Contacto%20desde%20tu%20portafolio", "_blank"),
-    linkedin: () => window.open("https://www.linkedin.com/in/mateo-liendo02", "_blank"),
-    github: () => window.open("https://github.com/mat0222", "_blank"),
-    cv: () => {
-      window.open("curriculum.html", "_blank");
-    },
-    whatsapp: () => window.open("https://wa.me/5493573414204?text=Hola%20Mateo,%20vi%20tu%20portafolio%20y%20me%20gustaría%20hablar%20contigo", "_blank"),
-    services: () => {
-      window.open("servicio.html", "_blank");
-    },
-  }
-
-  if (contacts[contact]) {
-    contacts[contact]()
-  }
+  // Reset typing effect
+  typingIndex = 0
+  charIndex = 0
+  isDeleting = false
 }
+
+// Projects
+function renderProjects() {
+  const projectsGrid = document.getElementById("projectsGrid")
+  const projects = translations[currentLang].projects
+
+  projectsGrid.innerHTML = projects
+    .map(
+      (project, index) => `
+    <div class="project-card" onclick="openProjectModal(${index})">
+      <div class="project-carousel" data-project="${index}">
+        <div class="carousel-images">
+          ${project.images
+            .map(
+              (img, imgIndex) => `
+            <img src="${img}" alt="${project.title} - Image ${imgIndex + 1}" class="project-image ${imgIndex === 0 ? "active" : ""}" loading="lazy">
+          `,
+            )
+            .join("")}
+        </div>
+        <button class="carousel-btn carousel-prev" onclick="event.stopPropagation(); changeCarouselImage(${index}, -1)">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-btn carousel-next" onclick="event.stopPropagation(); changeCarouselImage(${index}, 1)">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="carousel-indicators">
+          ${project.images
+            .map(
+              (_, imgIndex) => `
+            <span class="indicator ${imgIndex === 0 ? "active" : ""}" onclick="event.stopPropagation(); setCarouselImage(${index}, ${imgIndex})"></span>
+          `,
+            )
+            .join("")}
+        </div>
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">${project.title}</h3>
+        <p class="project-description">${project.description}</p>
+        <div class="project-tags">
+          ${project.tags.map((tag) => `<span class="project-tag">${tag}</span>`).join("")}
+        </div>
+      </div>
+    </div>
+  `,
+    )
+    .join("")
+}
+
+// Modal
+const modal = document.getElementById("projectModal")
+const modalOverlay = document.getElementById("modalOverlay")
+const modalClose = document.getElementById("modalClose")
+const modalBody = document.getElementById("modalBody")
+
+function openProjectModal(index) {
+  const project = translations[currentLang].projects[index]
+
+  modalBody.innerHTML = `
+    <div class="modal-carousel">
+      <div class="modal-carousel-images">
+        ${project.images
+          .map(
+            (img, imgIndex) => `
+          <img src="${img}" alt="${project.title} - Image ${imgIndex + 1}" class="modal-image ${imgIndex === 0 ? "active" : ""}">
+        `,
+          )
+          .join("")}
+      </div>
+      <button class="carousel-btn carousel-prev" onclick="changeModalImage(-1)">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="carousel-btn carousel-next" onclick="changeModalImage(1)">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+      <div class="carousel-indicators modal-indicators">
+        ${project.images
+          .map(
+            (_, imgIndex) => `
+          <span class="indicator ${imgIndex === 0 ? "active" : ""}" onclick="setModalImage(${imgIndex})"></span>
+        `,
+          )
+          .join("")}
+      </div>
+    </div>
+    
+    <h2 class="modal-title">${project.title}</h2>
+    <p class="modal-description">${project.description}</p>
+    
+    <div class="modal-section">
+      <h3>${currentLang === "es" ? "Características Principales" : "Key Features"}</h3>
+      <ul>
+        ${project.features.map((feature) => `<li>${feature}</li>`).join("")}
+      </ul>
+    </div>
+    
+    <div class="modal-section">
+      <h3>${currentLang === "es" ? "Tecnologías Utilizadas" : "Technologies Used"}</h3>
+      <ul>
+        ${project.technologies.map((tech) => `<li>${tech}</li>`).join("")}
+      </ul>
+    </div>
+    
+    
+  `
+
+  modal.classList.add("active")
+  document.body.style.overflow = "hidden"
+}
+
+function closeProjectModal() {
+  modal.classList.remove("active")
+  document.body.style.overflow = ""
+}
+
+modalClose.addEventListener("click", closeProjectModal)
+modalOverlay.addEventListener("click", closeProjectModal)
+
+// Close modal with Escape key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && modal.classList.contains("active")) {
+    closeProjectModal()
+  }
+})
 
 // Intersection Observer for animations
 const observerOptions = {
@@ -237,100 +493,97 @@ const observer = new IntersectionObserver((entries) => {
   })
 }, observerOptions)
 
-// Observe all sections for scroll animations
+// Observe all sections
 document.querySelectorAll("section").forEach((section) => {
   section.style.opacity = "0"
   section.style.transform = "translateY(30px)"
-  section.style.transition = "opacity 0.6s ease, transform 0.6s ease"
+  section.style.transition = "opacity 0.6s ease-out, transform 0.6s ease-out"
   observer.observe(section)
 })
 
-// Parallax effect for floating shapes
-window.addEventListener("scroll", () => {
-  const scrolled = window.pageYOffset
-  const shapes = document.querySelectorAll(".floating-shape")
-
-  shapes.forEach((shape, index) => {
-    const speed = 0.5 + index * 0.1
-    shape.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.1}deg)`
-  })
-})
-
-// Typing effect for hero title
-function typeWriter(element, text, speed = 100) {
-  let i = 0
-  element.innerHTML = ""
-
-  function type() {
-    if (i < text.length) {
-      element.innerHTML += text.charAt(i)
-      i++
-      setTimeout(type, speed)
+// Animate skill bars when visible
+const skillObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const progressBars = entry.target.querySelectorAll(".skill-progress")
+      progressBars.forEach((bar) => {
+        const width = bar.style.width
+        bar.style.width = "0"
+        setTimeout(() => {
+          bar.style.width = width
+        }, 100)
+      })
+      skillObserver.unobserve(entry.target)
     }
-  }
+  })
+}, observerOptions)
 
-  type()
+const skillsSection = document.querySelector(".skills")
+if (skillsSection) {
+  skillObserver.observe(skillsSection)
 }
 
-// Initialize typing effect when page loads
-window.addEventListener("load", () => {
-  const mainTitle = document.querySelector(".main-title")
-  const subtitle = document.querySelector(".subtitle")
+// Carousel navigation functions
+function changeCarouselImage(projectIndex, direction) {
+  const carousel = document.querySelector(`.project-carousel[data-project="${projectIndex}"]`)
+  const images = carousel.querySelectorAll(".project-image")
+  const indicators = carousel.querySelectorAll(".indicator")
 
-  setTimeout(() => {
-    typeWriter(mainTitle, "LIENDO MATEO", 150)
-  }, 1000)
+  const currentIndex = Array.from(images).findIndex((img) => img.classList.contains("active"))
+  let newIndex = currentIndex + direction
 
-  setTimeout(() => {
-    typeWriter(subtitle, "DESARROLLADOR WEB", 150)
-  }, 3000)
-})
+  if (newIndex < 0) newIndex = images.length - 1
+  if (newIndex >= images.length) newIndex = 0
 
-// Add active class to navigation based on scroll position
-window.addEventListener("scroll", () => {
-  const sections = document.querySelectorAll("section[id]")
-  const navLinks = document.querySelectorAll(".nav-link")
+  images[currentIndex].classList.remove("active")
+  indicators[currentIndex].classList.remove("active")
 
-  let current = ""
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop
-    const sectionHeight = section.clientHeight
-    if (scrollY >= sectionTop - 200) {
-      current = section.getAttribute("id")
-    }
-  })
-
-  navLinks.forEach((link) => {
-    link.classList.remove("active")
-    if (link.getAttribute("href") === `#${current}`) {
-      link.classList.add("active")
-    }
-  })
-})
-
-function handleDemoClick(projectTitle, btn) {
-  // Diccionario de proyectos con demos disponibles
-  const demos = {
-    "FobiBike - Sistema de Administración de Productos": "https://mat0222.github.io/bicicleteria/",
-    "Football Manager Web": "https://mat0222.github.io/Futmania/",
-    "Funko Pop E-Commerce Simulation": "https://mat0222.github.io/funko-shop/",
-    "Info-Play": "https://mat0222.github.io/info-play/",
-    "Casla-Info": "https://mat0222.github.io/casla-info/",
-    // Agregá más títulos con URLs según quieras
-  };
-
-  const demoUrl = demos[projectTitle];
-  if (demoUrl) {
-    window.open(demoUrl, "_blank");
-  } else {
-    // Mostrar mensaje temporal si no hay demo disponible
-    const originalText = btn.innerHTML;
-    btn.innerHTML = '<i class="fas fa-clock"></i> Próximamente';
-    btn.style.background = "linear-gradient(45deg, #95a5a6, #7f8c8d)";
-
-    setTimeout(() => {
-      btn.innerHTML = originalText;
-      btn.style.background = "linear-gradient(45deg, #f1c40f, #e67e22)";
-    }, 2000);
-  }
+  images[newIndex].classList.add("active")
+  indicators[newIndex].classList.add("active")
 }
+
+function setCarouselImage(projectIndex, imageIndex) {
+  const carousel = document.querySelector(`.project-carousel[data-project="${projectIndex}"]`)
+  const images = carousel.querySelectorAll(".project-image")
+  const indicators = carousel.querySelectorAll(".indicator")
+
+  images.forEach((img) => img.classList.remove("active"))
+  indicators.forEach((ind) => ind.classList.remove("active"))
+
+  images[imageIndex].classList.add("active")
+  indicators[imageIndex].classList.add("active")
+}
+
+// Modal carousel navigation functions
+function changeModalImage(direction) {
+  const images = document.querySelectorAll(".modal-carousel-images .modal-image")
+  const indicators = document.querySelectorAll(".modal-indicators .indicator")
+
+  const currentIndex = Array.from(images).findIndex((img) => img.classList.contains("active"))
+  let newIndex = currentIndex + direction
+
+  if (newIndex < 0) newIndex = images.length - 1
+  if (newIndex >= images.length) newIndex = 0
+
+  images[currentIndex].classList.remove("active")
+  indicators[currentIndex].classList.remove("active")
+
+  images[newIndex].classList.add("active")
+  indicators[newIndex].classList.add("active")
+}
+
+function setModalImage(imageIndex) {
+  const images = document.querySelectorAll(".modal-carousel-images .modal-image")
+  const indicators = document.querySelectorAll(".modal-indicators .indicator")
+
+  images.forEach((img) => img.classList.remove("active"))
+  indicators.forEach((ind) => ind.classList.remove("active"))
+
+  images[imageIndex].classList.add("active")
+  indicators[imageIndex].classList.add("active")
+}
+
+// Initialize
+renderProjects()
+
+

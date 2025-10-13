@@ -1,4 +1,3 @@
-// Smooth animations and interactions
 document.addEventListener("DOMContentLoaded", () => {
   const planCards = document.querySelectorAll(".plan-card")
   const navLinks = document.querySelectorAll(".nav-link")
@@ -141,19 +140,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const notification = document.createElement("div")
     notification.textContent = message
     notification.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: linear-gradient(135deg, #ffc107, #ff8f00);
-            color: black;
-            padding: 15px 25px;
-            border-radius: 8px;
-            font-weight: 600;
-            z-index: 1000;
-            transform: translateX(100%);
-            transition: transform 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        `
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: linear-gradient(135deg, #fbbf24, #f59e0b);
+      color: #111827;
+      padding: 15px 25px;
+      border-radius: 8px;
+      font-weight: 600;
+      z-index: 1000;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      box-shadow: 0 10px 30px rgba(251, 191, 36, 0.4);
+    `
 
     document.body.appendChild(notification)
 
@@ -198,31 +197,31 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 })
 
-// Add some interactive particles (optional enhancement)
+// Add some interactive particles
 function createParticles() {
   const particlesContainer = document.createElement("div")
   particlesContainer.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: -1;
-    `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+  `
 
   document.body.appendChild(particlesContainer)
 
   for (let i = 0; i < 20; i++) {
     const particle = document.createElement("div")
     particle.style.cssText = `
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: rgba(255, 193, 7, 0.3);
-            border-radius: 50%;
-            animation: float ${5 + Math.random() * 10}s infinite linear;
-        `
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: rgba(251, 191, 36, 0.3);
+      border-radius: 50%;
+      animation: float ${5 + Math.random() * 10}s infinite linear;
+    `
 
     particle.style.left = Math.random() * 100 + "%"
     particle.style.top = Math.random() * 100 + "%"
@@ -234,16 +233,17 @@ function createParticles() {
   // Add CSS animation
   const style = document.createElement("style")
   style.textContent = `
-        @keyframes float {
-            0% { transform: translateY(0px) rotate(0deg); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
-        }
-    `
+    @keyframes float {
+      0% { transform: translateY(0px) rotate(0deg); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+    }
+  `
   document.head.appendChild(style)
 }
 
 // Initialize particles
 createParticles()
+
 
