@@ -19,7 +19,7 @@
                 </div>
                 <div class="profile-info">
                     <h1>Mateo Agustin Liendo</h1>
-                    <h2>Desarrollador Web Full Stack</h2>
+                    <h2>Desarrollador Web Junior</h2>
                     <p>Apasionado por crear experiencias web excepcionales con tecnologías modernas</p>
                 </div>
             </div>
@@ -38,7 +38,7 @@
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/mateo-liendo02" target="_blank">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/mateo-liendo-8897ba378" target="_blank">LinkedIn</a>
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-github"></i>
@@ -46,7 +46,7 @@
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-file-pdf"></i>
-                    <a href="curriculum/Curriculum Vitae.pdf" target="_blank">Descargar CV</a>
+                    <a href="curriculum/curriculum.pdf" target="_blank">Descargar CV</a>
                 </div>
             </div>
         </header>
@@ -94,11 +94,11 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-header">
-                            <span class="skill-name"><i class="fa-brands fa-react"></i> React</span>
-                            <span class="skill-level">10%</span>
+                            <span class="skill-name"><i class="fa-brands fa-node-js"></i> Node.js</span>
+                            <span class="skill-level">90%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 10%"></div>
+                            <div class="skill-progress" style="width: 90%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
@@ -113,25 +113,33 @@
                     <div class="skill-item">
                         <div class="skill-header">
                             <span class="skill-name"><i class="fab fa-python"></i> Python</span>
+                            <span class="skill-level">50%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fa-brands fa-react"></i> React</span>
+                            <span class="skill-level">20%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 20%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fa-brands fa-android"></i> Kotlin</span>
                             <span class="skill-level">30%</span>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 30%"></div>
                         </div>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name"><i class="fa-brands fa-android"></i> Kotlin</span>
-                            <span class="skill-level">40%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 40%"></div>
-                        </div>
-                    </div>
                 </div>
             </section>
-
-             
+ 
             <section class="section">
                 <h3><i class="fas fa-briefcase"></i> Experiencia Profesional</h3>
                 <div class="experience-item">
@@ -162,7 +170,6 @@
                 </div>
             </section>
 
-             
             <section class="section">
                 <h3><i class="fas fa-graduation-cap"></i> Educación</h3>
                 <div class="education-item">
@@ -181,7 +188,7 @@
                 </div>
             </section>
 
-             
+            
             <section class="section">
                 <h3><i class="fas fa-project-diagram"></i> Proyectos Destacados</h3>
                 <div class="projects-grid">
@@ -242,10 +249,10 @@
                     </div>
                     <div class="project-card">
                         <div class="project-icon">
-                            <i class="fa-solid fa-info"></i>
+                            <i class="fas fa-gamepad"></i>
                         </div>
                         <h4>Casla-Info</h4>
-                        <p>Página informativa con líneas de tiempo interactivas y cuadros explicativos que muestran la evolución de Sony en el mundo gamer.</p>
+                        <p>Portal dedicado a la historia, estadio, jugadores y vías de contacto, diseñado para brindar información clara y atractiva a los hinchas del cuervo.</p>
                         <div class="project-tech">
                             <span><i class="fab fa-html5"></i> HTML</span>
                             <span><i class="fab fa-css3-alt"></i> CSS</span>
@@ -255,7 +262,6 @@
                 </div>
             </section>
 
-              
             <section class="section">
                 <h3><i class="fas fa-language"></i> Idiomas</h3>
                 <div class="languages-grid">
@@ -280,11 +286,11 @@
                 </div>
             </section>
 
-              
+             
             <section class="section">
                 <h3><i class="fas fa-certificate"></i> Certificaciones</h3>
                 <div class="certifications-grid">
-                    <div class="certification-item">
+                    <div class="certification-item cert-with-image" onclick="openCertModal('imagenes/ingles.png')">
                         <div class="cert-icon">
                             <i class="fas fa-award"></i>
                         </div>
@@ -295,9 +301,16 @@
                             </div>
                             <p class="cert-issuer"><i class="fas fa-building"></i> Cambridge Assessment English</p>
                             <p class="cert-description">Certificación en fundamentos de inglés.</p>
+                            <div class="cert-image-preview">
+                                <img src="imagenes/ingles.png" alt="Certificado IPET N°55">
+                                <div class="cert-image-overlay">
+                                    <i class="fas fa-search-plus"></i>
+                                    <span>Click para ver</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="certification-item">
+                    <div class="certification-item cert-with-image" onclick="openCertModal('imagenes/carpitero.png')">
                         <div class="cert-icon">
                             <i class="fas fa-award"></i>
                         </div>
@@ -308,9 +321,16 @@
                             </div>
                             <p class="cert-issuer"><i class="fas fa-building"></i> IPET N°55</p>
                             <p class="cert-description">Capacitado para realizar tareas profesionales relacionadas a la madera y el mueble.</p>
+                            <div class="cert-image-preview">
+                                <img src="imagenes/carpitero.png" alt="Certificado IPET N°55">
+                                <div class="cert-image-overlay">
+                                    <i class="fas fa-search-plus"></i>
+                                    <span>Click para ver</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="certification-item">
+                    <div class="certification-item cert-with-image" onclick="openCertModal('imagenes/programador.png')">
                         <div class="cert-icon">
                             <i class="fas fa-award"></i>
                         </div>
@@ -319,24 +339,62 @@
                                 <h4>Certificado Profesional en Programación</h4>
                                 <span class="cert-date"><i class="fas fa-calendar-alt"></i> 2024</span>
                             </div>
-                            <p class="cert-issuer"><i class="fas fa-building"></i> Instituto Superior Villa Del Rosario</p>
+                            <p class="cert-issuer"><i class="fas fa-building"></i>Instituto Superior Villa Del Rosario</p>
                             <p class="cert-description">Creación de páginas web y gestión de bases de datos (SQL).</p>
+                            <div class="cert-image-preview">
+                                <img src="imagenes/programador.png" alt="Certificado IPET N°55">
+                                <div class="cert-image-overlay">
+                                    <i class="fas fa-search-plus"></i>
+                                    <span>Click para ver</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
 
-         
+        
         <footer class="footer">
             <p>&copy; 2025 Mateo Agustin Liendo. Todos los derechos reservados.</p>
             <div class="footer-links">
-                <a href="https://www.linkedin.com/in/mateo-liendo02" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/mateo-liendo-8897ba378" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/mat0222" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="mailto:mateoliendo022@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
         </footer>
     </div>
+
+    <!-- Added modal for certificate images -->
+    <div id="certModal" class="cert-modal" onclick="closeCertModal()">
+        <span class="cert-modal-close">&times;</span>
+        <img class="cert-modal-content" id="certModalImg">
+        <div class="cert-modal-caption">Click fuera de la imagen para cerrar</div>
+    </div>
+
+    <script>
+        function openCertModal(imageSrc) {
+            const modal = document.getElementById('certModal');
+            const modalImg = document.getElementById('certModalImg');
+            modal.style.display = 'flex';
+            modalImg.src = imageSrc;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCertModal() {
+            const modal = document.getElementById('certModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeCertModal();
+            }
+        });
+    </script>
 </body>
 </html>
+
 
