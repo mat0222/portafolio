@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Mateo Liendo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c111b"/>
+      <stop offset="100%" stop-color="#1a2232"/>
+    </linearGradient>
+  </defs>
+  <!-- Fondo -->
+  <rect width="32" height="32" rx="8" fill="url(#bg)"/>
+  <!-- Borde sutil -->
+  <rect x="1" y="1" width="30" height="30" rx="7" fill="none" stroke="#4ade80" stroke-opacity="0.28" stroke-width="1"/>
+  <!-- Monograma ML -->
+  <path
+    fill="#f1f5f9"
+    d="M6.5 23V9h2.35l3.15 8.2L15.2 9H17.5v14h-2.05V12.55L12.2 21.1h-1.4L7.55 12.55V23H6.5zm13.2 0V9h2.1v11.85H26.5V23h-6.8z"
+  />
+  <!-- Acento -->
+  <path fill="#4ade80" d="M6.5 25.2h19v1.4H6.5z"/>
+</svg>

@@ -1,0 +1,36 @@
+.experience__role {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+}
+
+.experience__summary {
+  color: var(--text-muted);
+  margin-bottom: 1.15rem;
+  max-width: 48rem;
+}
+
+.experience__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  max-width: 48rem;
+}
+
+.experience__list li {
+  position: relative;
+  padding-left: 1.25rem;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+}
+
+.experience__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
