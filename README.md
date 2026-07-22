@@ -1,73 +1,98 @@
-# React + TypeScript + Vite
+# Mateo Liendo — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio personal de desarrollador web full stack, enfocado en performance, arquitectura limpia y experiencia de usuario.
 
-Currently, two official plugins are available:
+**Repositorio:** [github.com/mat0222/portafolio](https://github.com/mat0222/portafolio)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Tecnología | Uso |
+|---|---|
+| React 19 | UI |
+| TypeScript | Tipado estático |
+| Vite 7 | Build y dev server |
+| Lucide React | Iconografía |
+| CSS Modules / CSS propio | Estilos por sección |
 
-## Expanding the ESLint configuration
+Sin frameworks de UI pesados: diseño custom con variables CSS y tipografía Manrope.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Secciones
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Hero** — Presentación y CTA a proyectos
+- **Sobre mí** — Perfil profesional
+- **Experiencia** — NexoSync y casos destacados (p. ej. FobiBike)
+- **Tecnologías** — Frontend, backend, bases de datos y DevOps
+- **Proyectos** — Casos reales (problema → solución → impacto) con galería y lightbox
+- **Contacto** — LinkedIn, email y GitHub
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Incluye **i18n ES / EN** con cambio de idioma desde la navbar.
+
+---
+
+## Requisitos
+
+- Node.js 18+ (recomendado LTS)
+- npm
+
+---
+
+## Cómo ejecutar
+
+```bash
+# Clonar
+git clone https://github.com/mat0222/portafolio.git
+cd portafolio
+
+# Instalar dependencias
+npm install
+
+# Desarrollo (HMR)
+npm run dev
+
+# Build de producción
+npm run build
+
+# Previsualizar el build
+npm run preview
+
+# Lint
+npm run lint
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Estructura
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── components/     # Hero, About, Experience, Technologies, Projects, Contact, Navbar
+├── i18n/           # Traducciones ES/EN y LanguageProvider
+├── App.tsx
+├── main.tsx
+└── index.css       # Tokens de color, tipografía y utilidades globales
+public/
+├── favicon.svg
+└── projects/       # Assets de proyectos
+```
+
+---
+
+## Personalización rápida
+
+| Qué | Dónde |
+|---|---|
+| Textos ES/EN | `src/i18n/translations.ts` |
+| Proyectos y enlaces | `src/components/Projects.tsx` + traducciones |
+| Colores / tema | `src/index.css` (`--accent`, `--bg`, etc.) |
+| Meta título / SEO | `index.html` |
+| Favicon | `public/favicon.svg` |
+
+---
+
+## Licencia
+
+Uso personal. El código del portfolio es de Mateo Liendo.
