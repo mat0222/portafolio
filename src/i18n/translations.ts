@@ -41,7 +41,7 @@ const es = {
   },
   projects: {
     title: 'Proyectos',
-    subtitle: 'Tres productos reales: del problema a la solución y su impacto.',
+    subtitle: 'Productos reales: del problema a la solución y su impacto.',
     problem: 'Problema',
     solution: 'Solución',
     impact: 'Impacto',
@@ -56,6 +56,15 @@ const es = {
     nextImage: 'Imagen siguiente',
     gallery: 'Galería',
     items: [
+      {
+        title: 'Fénix',
+        problem:
+          'El boliche no tenía una presencia digital a la altura de la fiesta: sin una web clara para mostrar el line-up, las novedades ni un camino directo a comprar tickets.',
+        solution:
+          'Landing de alto impacto con estética nightlife (cyan y magenta), hero inmersivo, navegación a Nosotros, Experiencia, Line-up, Novedades y Contacto, más CTAs de tickets.',
+        impact:
+          'Una marca memorable online y un flujo directo a entradas: la propuesta del club se entiende en segundos y el visitante llega a tickets o al line-up sin fricción.',
+      },
       {
         title: 'MobiHouse',
         problem:
@@ -137,7 +146,7 @@ const en: Translations = {
   },
   projects: {
     title: 'Projects',
-    subtitle: 'Three real products: from the problem to the solution and its impact.',
+    subtitle: 'Real products: from the problem to the solution and its impact.',
     problem: 'Problem',
     solution: 'Solution',
     impact: 'Impact',
@@ -152,6 +161,15 @@ const en: Translations = {
     nextImage: 'Next image',
     gallery: 'Gallery',
     items: [
+      {
+        title: 'Fénix',
+        problem:
+          'The club lacked a digital presence that matched the night: no clear site to show the line-up, news, or a direct path to buy tickets.',
+        solution:
+          'High-impact nightlife landing with cyan/magenta aesthetics, an immersive hero, navigation to About, Experience, Line-up, News and Contact, plus ticket CTAs.',
+        impact:
+          'A memorable brand online and a straight path to tickets: visitors grasp the club in seconds and reach tickets or the line-up without friction.',
+      },
       {
         title: 'MobiHouse',
         problem:

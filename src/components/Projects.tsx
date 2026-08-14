@@ -12,14 +12,20 @@ type ProjectMeta = {
 
 const projectMeta: ProjectMeta[] = [
   {
+    images: ['/projects/fenix-1.png'],
+    tags: ['Landing', 'Eventos', 'UI', 'Netlify'],
+    demo: 'https://fenixclub.netlify.app/',
+    code: 'https://github.com/mat0222/fenix',
+  },
+  {
     images: [
       '/projects/mobihouse-1.png',
       '/projects/mobihouse-2.png',
       '/projects/mobihouse-3.png',
     ],
     tags: ['React', 'Tailwind', 'Leaflet', 'Maps'],
-    demo: '#',
-    code: '#',
+    demo: 'https://mat0222.github.io/mobihouse/',
+    code: 'https://github.com/mat0222/mobihouse',
   },
   {
     images: [
@@ -28,8 +34,8 @@ const projectMeta: ProjectMeta[] = [
       '/projects/fobibike-3.png',
     ],
     tags: ['React', 'Dashboard', 'IA / Groq', 'Inventario'],
-    demo: '#',
-    code: '#',
+    demo: 'https://mat0222.github.io/fobibike/',
+    code: 'https://github.com/mat0222/fobibike',
   },
   {
     images: [
@@ -38,8 +44,8 @@ const projectMeta: ProjectMeta[] = [
       '/projects/matchear-3.png',
     ],
     tags: ['React', 'Reservas', 'UX', 'Torneos'],
-    demo: '#',
-    code: '#',
+    demo: 'matchear.netlify.app',
+    code: 'https://github.com/mat0222/matchear',
   },
 ]
 
@@ -225,7 +231,13 @@ export default function Projects() {
                   </div>
 
                   <div className="project-case__actions">
-                    <a href={project.demo} className="btn btn-primary">
+                    <a
+                      href={project.demo}
+                      className="btn btn-primary"
+                      {...(project.demo?.startsWith('http')
+                        ? { target: '_blank', rel: 'noopener noreferrer' }
+                        : {})}
+                    >
                       {t.projects.viewProject}
                       <ArrowUpRight size={16} />
                     </a>
