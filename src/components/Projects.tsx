@@ -12,7 +12,11 @@ type ProjectMeta = {
 
 const projectMeta: ProjectMeta[] = [
   {
-    images: ['/projects/fenix-1.png'],
+    images: [
+      '/projects/fenix-1.png',
+      '/projects/fenix-2.png',
+      '/projects/fenix-3.png',
+    ],
     tags: ['Landing', 'Eventos', 'UI', 'Netlify'],
     demo: 'https://fenixclub.netlify.app/',
     code: 'https://github.com/mat0222/fenix',
