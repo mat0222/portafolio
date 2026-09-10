@@ -1,4 +1,4 @@
-import { Mail } from 'lucide-react'
+import { Download, Mail } from 'lucide-react'
 import { useLanguage } from '../i18n/useLanguage'
 import './Contact.css'
 
@@ -67,6 +67,8 @@ export default function Contact() {
         <h2 className="section-title">{t.contact.title}</h2>
         <hr className="section-divider" />
 
+        <p className="contact__available">{t.contact.available}</p>
+
         <div className="contact__links">
           {contacts.map((item) => (
             <a
@@ -81,6 +83,17 @@ export default function Contact() {
               <span>{item.label}</span>
             </a>
           ))}
+        </div>
+
+        <div className="contact__ctas">
+          <a href="mailto:mateoliendo022@gmail.com" className="btn btn-primary">
+            <Mail size={16} />
+            {t.contact.writeMe}
+          </a>
+          <a href="/Mateo-Liendo-CV.pdf" className="btn btn-secondary" download>
+            <Download size={16} />
+            {t.contact.downloadCv}
+          </a>
         </div>
 
         <p className="contact__note">{t.contact.note}</p>

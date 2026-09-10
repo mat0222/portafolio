@@ -2,19 +2,16 @@ import {
   Atom,
   Wind,
   GitBranch,
-  Container,
   Server,
   Code,
   Braces,
   FileCode,
   Palette,
-  Smartphone,
   Database,
-  Zap,
   Flame,
-  Send,
   Globe,
-  Cloud,
+  Triangle,
+  Zap,
   type LucideIcon,
 } from 'lucide-react'
 import { useLanguage } from '../i18n/useLanguage'
@@ -32,23 +29,21 @@ const columns: TechItem[][] = [
     { name: 'Tailwind CSS', icon: Wind },
   ],
   [
-    { name: 'Node.js', icon: Server },
     { name: 'PHP', icon: Globe },
-    { name: 'Kotlin', icon: Smartphone },
-  ],
-  [
-    { name: 'PostgreSQL', icon: Database },
-    { name: 'MySQL', icon: Database },
-    { name: 'SQL Server', icon: Database },
-    { name: 'Supabase', icon: Zap },
+    { name: 'Node.js', icon: Server },
+    { name: 'APIs REST', icon: Zap },
     { name: 'Firebase', icon: Flame },
   ],
   [
-    { name: 'Docker', icon: Container },
+    { name: 'MySQL', icon: Database },
+    { name: 'SQL', icon: Database },
+    { name: 'Firebase', icon: Flame },
+  ],
+  [
     { name: 'Git', icon: GitBranch },
-    { name: 'Postman', icon: Send },
-    { name: 'Apache', icon: Server },
-    { name: 'AWS', icon: Cloud },
+    { name: 'Vite', icon: Zap },
+    { name: 'Vercel', icon: Triangle },
+    { name: 'Netlify', icon: Globe },
   ],
 ]
 
@@ -67,7 +62,7 @@ export default function Technologies() {
               <h3 className="tech__column-title">{t.tech.columns[index]}</h3>
               <ul className="tech__list">
                 {items.map((item) => (
-                  <li key={item.name} className="tech__item">
+                  <li key={`${t.tech.columns[index]}-${item.name}`} className="tech__item">
                     <item.icon size={18} strokeWidth={1.75} aria-hidden />
                     <span>{item.name}</span>
                   </li>

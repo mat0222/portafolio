@@ -13,74 +13,94 @@ const es = {
     openMenu: 'Abrir menú',
     closeMenu: 'Cerrar menú',
     switchLang: 'Switch to English',
+    downloadCv: 'Descargar CV',
+    available: 'Disponible para oportunidades',
   },
   hero: {
-    titleA: 'Desarrollador Web Full Stack',
-    titleB: 'Especializado en Performance',
-    text: 'Construyo soluciones web escalables con foco en optimización, arquitectura limpia y una experiencia de usuario fluida en cada interacción.',
+    titleA: 'Desarrollador Web Junior',
+    titleB: 'React · JavaScript · PHP',
+    text: 'Construyo sitios y sistemas a medida para comercios locales. Busco mi primer rol formal junior, con base en React, TypeScript, PHP y productos ya en producción.',
     cta: 'Ver Proyectos',
+    ctaCv: 'Descargar CV',
+    ctaContact: 'Contactar',
   },
   about: {
     title: 'Sobre Mí',
-    text: 'Soy desarrollador full stack con una base fuerte en arquitectura de computadoras y una curiosidad constante por la infraestructura cloud. Disfruto convertir problemas de negocio en productos digitales medibles: desde la UI hasta el despliegue. Hoy combino formación académica (ISVdR y UBP) con certificaciones oficiales en AWS y PostgreSQL para construir soluciones web eficientes, mantenibles y orientadas a performance.',
+    text: 'Soy desarrollador web junior de Córdoba, Argentina. Me formé como Técnico en Desarrollo de Software (ISVdR) y curso la Licenciatura en Sistemas de Información en la UBP. Me apasiona pasar de un requerimiento de negocio a una interfaz simple de operar: inventarios, reservas, landings y paneles. Trabajo con React, JavaScript/TypeScript, PHP, MySQL y Firebase, y sigo profundizando en cloud (preparación AWS Cloud Practitioner). Español nativo e inglés A2 (Cambridge KET).',
   },
   experience: {
     title: 'Experiencia',
-    role: 'Fundador de NexoSync (Emprendimiento Web)',
-    summary:
-      'Liderazgo técnico y producto en un emprendimiento enfocado en soluciones web modernas, desde la arquitectura hasta el despliegue en producción.',
-    bullets: [
-      'Diseño e implementación de aplicaciones web con React, TypeScript y arquitectura orientada a performance.',
-      'Gestión de infraestructura en Vercel: despliegues continuos, dominios y optimización de entornos de producción.',
-      'Mejora de visibilidad online mediante SEO técnico, métricas Core Web Vitals y buenas prácticas de accesibilidad.',
-      'Caso de éxito en digitalización: Diseño y desarrollo integral de la plataforma web para FobiBike, automatizando su gestión de catálogo y mejorando la experiencia de compra de sus clientes.',
+    items: [
+      {
+        role: 'Desarrollador Web — NexoSync (Freelance)',
+        period: 'Ago 2025 – Actualidad',
+        location: 'Córdoba, Argentina',
+        summary:
+          'Desarrollo sitios y sistemas a medida para comercios locales con React, TypeScript, PHP y MySQL.',
+        bullets: [
+          'Implementé para FobiBike un sistema de inventario con CRUD y búsqueda por categoría, tipo, proveedor y disponibilidad, pensado para consultas de stock en mostrador.',
+          'Publico y mantengo sitios en producción (Vercel/Netlify): deploys, dominio y ajustes de SEO básico.',
+          'Tomo requerimientos con el cliente, defino alcance y entrego interfaces simples de operar en el día a día.',
+        ],
+      },
+    ],
+    milestonesTitle: 'Línea de tiempo',
+    milestones: [
+      { year: '2023–2025', label: 'Técnico en Desarrollo de Software — ISVdR' },
+      { year: 'Ago 2025', label: 'Inicio freelance en NexoSync' },
+      { year: '2025', label: 'Curso de React — CoderHouse' },
+      { year: '2026', label: 'Licenciatura en Sistemas (UBP) + prep. AWS' },
     ],
   },
   education: {
-    title: 'Educación y Certificaciones',
+    title: 'Educación y Formación',
     studiesTitle: 'Formación académica',
-    certsTitle: 'Certificaciones',
+    certsTitle: 'Cursos y certificaciones',
     studies: [
       {
-        title: 'Tecnicatura Superior en Desarrollo de Software',
-        institution: 'Instituto Superior Villa del Rosario (ISVdR)',
-        status: 'Completada',
-        detail:
-          'Formación técnica en desarrollo de software, bases de datos, programación y arquitectura de aplicaciones.',
-      },
-      {
-        title: 'Licenciatura en Informática',
+        title: 'Licenciatura en Sistemas de Información',
         institution: 'Universidad Blas Pascal (UBP)',
         status: 'En curso',
-        detail:
-          'Profundización en sistemas, ingeniería de software e infraestructura tecnológica aplicada a productos digitales.',
+        detail: 'Córdoba, Argentina · 2026 – En curso. Sistemas, ingeniería de software e infraestructura aplicada.',
+      },
+      {
+        title: 'Técnico en Desarrollo de Software',
+        institution: 'Instituto Superior Villa del Rosario (ISVdR)',
+        status: 'Completada',
+        detail: 'Villa del Rosario, Córdoba · 2023 – 2025. Desarrollo de software, bases de datos y programación.',
       },
     ],
     certs: [
       {
-        title: 'AWS Certified Cloud Practitioner',
-        issuer: 'Amazon Web Services',
-        detail:
-          'Fundamentos de cloud computing, servicios core de AWS, seguridad, pricing y arquitectura en la nube.',
+        title: 'Curso de React',
+        issuer: 'CoderHouse · 2025',
+        detail: 'Fundamentos y práctica de React para interfaces modernas y componentes reutilizables.',
       },
       {
-        title: 'PostgreSQL',
-        issuer: 'Certificación oficial',
-        detail:
-          'Modelado, consultas, performance y buenas prácticas de administración sobre PostgreSQL en entornos reales.',
+        title: 'Preparación AWS Cloud Practitioner',
+        issuer: 'Udemy · 2026',
+        detail: 'Curso de preparación hacia la certificación AWS Cloud Practitioner (cloud fundamentals).',
+      },
+      {
+        title: 'Cambridge English KET',
+        issuer: 'Cambridge · 2020',
+        detail: 'Inglés nivel A2 certificado (Key English Test).',
       },
     ],
   },
   tech: {
     title: 'Tecnologías',
-    columns: ['Frontend', 'Backend y Lenguajes', 'Bases de Datos', 'DevOps y Herramientas'],
+    columns: ['Frontend', 'Backend', 'Datos', 'Herramientas'],
   },
   projects: {
     title: 'Proyectos',
-    subtitle: 'Productos reales: del problema a la solución y su impacto medible.',
+    subtitle: 'Productos reales y personales: del problema a la solución y su impacto.',
     problem: 'Problema',
     solution: 'Solución',
     impact: 'Impacto',
+    estimated: 'estimado',
+    featured: 'Destacado',
+    filterAll: 'Todos',
     viewProject: 'Ver Proyecto',
     viewCode: 'Ver Código',
     zoom: 'Ampliar',
@@ -91,66 +111,80 @@ const es = {
     prevImage: 'Imagen anterior',
     nextImage: 'Imagen siguiente',
     gallery: 'Galería',
+    emptyFilter: 'No hay proyectos con ese filtro.',
     items: [
-      {
-        title: 'Fénix',
-        problem:
-          'El boliche no tenía una presencia digital a la altura de la fiesta: sin una web clara para mostrar el line-up, las novedades ni un camino directo a comprar tickets.',
-        solution:
-          'Landing de alto impacto con estética nightlife (cyan y magenta), hero inmersivo, navegación a Nosotros, Experiencia, Line-up, Novedades y Contacto, más CTAs de tickets.',
-        impact:
-          'Propuesta del club entendible en menos de 5 segundos y ruta directa a tickets/line-up, con carga optimizada orientada a Core Web Vitals > 90.',
-      },
-      {
-        title: 'MobiHouse',
-        problem:
-          'Buscar y comparar propiedades era lento y confuso: sin filtros claros, sin mapa útil y con poca transparencia sobre el estado de cada inmueble.',
-        solution:
-          'Plataforma inmobiliaria con landing de alto impacto, catálogo filtrable, favoritos y mapa interactivo (Leaflet) con pins y listado sincronizado.',
-        impact:
-          'Exploración con filtros + mapa en una sola vista: reducción estimada del ~60% en el tiempo para encontrar una propiedad relevante vs. listados sin contexto geográfico.',
-      },
       {
         title: 'Fobi Bike',
         problem:
-          'El negocio manejaba inventario y ventas de forma dispersa, sin métricas claras ni una forma rápida de consultar stock o registrar operaciones.',
+          'El negocio manejaba inventario y ventas de forma dispersa, sin métricas claras ni una forma rápida de consultar stock en mostrador.',
         solution:
-          'Dashboard de gestión con inventario (1400+ productos), control de ingresos, descuento automático de stock y asistente IA (Groq) por chat.',
+          'Sistema de inventario y ventas (cliente real) con CRUD, filtros cruzados, panel de métricas y asistente en lenguaje natural (Groq).',
         impact:
-          'Gestión unificada de 1.400+ productos, stock descontado al confirmar venta y consultas de inventario/ventas en lenguaje natural en segundos.',
+          'Gestión unificada de 1.400+ productos, stock descontado al confirmar venta y consultas de inventario/ventas en segundos.',
       },
       {
         title: 'Matchear',
         problem:
-          'Reservar canchas y organizar torneos dependía de mensajes y planillas: horarios poco claros, poca conversión y fricción para confirmar turnos.',
+          'Reservar canchas dependía de WhatsApp o llamadas: horarios poco claros y fricción para confirmar turnos.',
         solution:
-          'Plataforma de reservas con selección de día/horario, resumen de pago, seña y flujo de torneos con pasos guiados para armar el evento.',
+          'App web (React + Firebase) para ver disponibilidad, reservar turnos y administrar la cancha en un flujo único usuario/admin.',
         impact:
-          'Reserva completa en menos de 2 minutos (día + horario + seña) y armado de torneos en 4 pasos guiados, sin planillas ni ida y vuelta por WhatsApp.',
-      },
-      {
-        title: 'Ironcore Gym',
-        problem:
-          'El gimnasio no tenía una web moderna ni un panel para operar socios, pagos y asistencias: la inscripción y el control diario dependían de procesos manuales.',
-        solution:
-          'Sitio dark con planes (Básico, Full, Premium), CTAs de inscripción y un dashboard admin con KPIs, gráficos, ocupación por turnos y últimas inscripciones.',
-        impact:
-          'Panel con KPIs en tiempo real (socios activos, ingresos del mes, asistencias del día y pagos pendientes) y 3 planes comerciales listos para conversión.',
+          'Reserva completa en menos de 2 minutos (día + horario + seña), reemplazando idas y vueltas por chat (estimado).',
       },
       {
         title: 'FerroHogar',
         problem:
-          'Una ferretería necesitaba vender online y administrar catálogo, pedidos y stock sin una tienda ni un backoffice claros.',
+          'Una ferretería necesitaba vender online y administrar catálogo, pedidos y stock sin tienda ni backoffice claros.',
         solution:
-          'E-commerce completo: home, catálogo con filtros, carrito y un panel admin con ventas, alertas de stock, pedidos y estadísticas.',
+          'E-commerce con home, catálogo filtrable, carrito y panel admin con ventas, alertas de stock y pedidos.',
         impact:
-          'Catálogo de 40+ productos con filtros avanzados y admin con métricas diarias/mensuales, alertas de stock bajo y seguimiento de pedidos en un solo panel.',
+          'Catálogo de 40+ productos con filtros avanzados y métricas diarias/mensuales en un solo panel admin.',
+      },
+      {
+        title: 'MobiHouse',
+        problem:
+          'Buscar y comparar propiedades era lento: sin filtros claros ni mapa útil.',
+        solution:
+          'Plataforma inmobiliaria con catálogo filtrable, favoritos y mapa interactivo (Leaflet) sincronizado.',
+        impact:
+          'Exploración filtros + mapa en una vista: ~60% menos tiempo para hallar una propiedad relevante vs. listados planos (estimado).',
+      },
+      {
+        title: 'Ironcore Gym',
+        problem:
+          'El gimnasio no tenía web moderna ni panel para socios, pagos y asistencias.',
+        solution:
+          'Landing dark con planes (Básico, Full, Premium) y dashboard admin con KPIs, gráficos y ocupación por turnos.',
+        impact:
+          '3 planes comerciales listos para conversión y KPIs de socios, ingresos y asistencias en una sola pantalla.',
+      },
+      {
+        title: 'Fénix',
+        problem:
+          'El boliche no tenía una web clara para line-up, novedades ni compra de tickets.',
+        solution:
+          'Landing nightlife de alto impacto con hero inmersivo, secciones de experiencia/line-up y CTAs a tickets.',
+        impact:
+          'Propuesta entendible en menos de 5 segundos y ruta directa a tickets/line-up (estimado de lectura).',
       },
     ],
   },
   contact: {
     title: 'Contacto',
-    note: '¡Abierto a nuevas oportunidades! Conéctate conmigo a través de estas plataformas.',
+    note: 'Abierto a mi primer rol formal junior y a proyectos freelance. Escribime por email o LinkedIn.',
+    writeMe: 'Escribime',
+    downloadCv: 'Descargar CV (PDF)',
+    available: 'Disponible para oportunidades',
+  },
+  command: {
+    placeholder: 'Buscar sección, acción…',
+    hint: 'Ctrl K',
+    hintMac: '⌘ K',
+    empty: 'Sin resultados',
+    groups: {
+      navigate: 'Navegar',
+      actions: 'Acciones',
+    },
   },
   footer: {
     rights: 'Todos los derechos reservados.',
@@ -172,74 +206,94 @@ const en: Translations = {
     openMenu: 'Open menu',
     closeMenu: 'Close menu',
     switchLang: 'Cambiar a español',
+    downloadCv: 'Download CV',
+    available: 'Open to opportunities',
   },
   hero: {
-    titleA: 'Full Stack Web Developer',
-    titleB: 'Performance Specialist',
-    text: 'I build scalable web solutions focused on optimization, clean architecture and a smooth user experience in every interaction.',
+    titleA: 'Junior Web Developer',
+    titleB: 'React · JavaScript · PHP',
+    text: 'I build custom sites and systems for local businesses. I’m looking for my first formal junior role, with hands-on React, TypeScript, PHP and products already in production.',
     cta: 'View Projects',
+    ctaCv: 'Download CV',
+    ctaContact: 'Contact',
   },
   about: {
     title: 'About Me',
-    text: 'I am a full-stack developer with a strong foundation in computer architecture and a constant curiosity for cloud infrastructure. I enjoy turning business problems into measurable digital products—from UI to deployment. Today I combine academic training (ISVdR and UBP) with official AWS and PostgreSQL certifications to build efficient, maintainable, performance-oriented web solutions.',
+    text: 'I’m a junior web developer from Córdoba, Argentina. I trained as a Software Development Technician (ISVdR) and I’m pursuing a Bachelor’s in Information Systems at UBP. I enjoy turning business requirements into interfaces that are simple to operate day to day: inventory, bookings, landings and dashboards. I work with React, JavaScript/TypeScript, PHP, MySQL and Firebase, and I’m deepening cloud skills (AWS Cloud Practitioner prep). Native Spanish and English A2 (Cambridge KET).',
   },
   experience: {
     title: 'Experience',
-    role: 'Founder of NexoSync (Web Startup)',
-    summary:
-      'Technical and product leadership at a startup focused on modern web solutions, from architecture to production deployment.',
-    bullets: [
-      'Design and implementation of web applications with React, TypeScript and performance-oriented architecture.',
-      'Infrastructure management on Vercel: continuous deployments, domains and production environment optimization.',
-      'Improved online visibility through technical SEO, Core Web Vitals metrics and accessibility best practices.',
-      'Digitalization success story: end-to-end design and development of the FobiBike web platform, automating catalog management and improving the customer shopping experience.',
+    items: [
+      {
+        role: 'Web Developer — NexoSync (Freelance)',
+        period: 'Aug 2025 – Present',
+        location: 'Córdoba, Argentina',
+        summary:
+          'I build custom sites and systems for local businesses with React, TypeScript, PHP and MySQL.',
+        bullets: [
+          'Built FobiBike’s inventory system with CRUD and search by category, type, supplier and availability for counter stock checks.',
+          'Ship and maintain production sites (Vercel/Netlify): deploys, domains and basic SEO.',
+          'Gather requirements with clients, define scope and deliver interfaces that are simple to operate day to day.',
+        ],
+      },
+    ],
+    milestonesTitle: 'Timeline',
+    milestones: [
+      { year: '2023–2025', label: 'Software Development Technician — ISVdR' },
+      { year: 'Aug 2025', label: 'Started freelance at NexoSync' },
+      { year: '2025', label: 'React course — CoderHouse' },
+      { year: '2026', label: 'Information Systems degree (UBP) + AWS prep' },
     ],
   },
   education: {
-    title: 'Education & Certifications',
+    title: 'Education & Training',
     studiesTitle: 'Academic background',
-    certsTitle: 'Certifications',
+    certsTitle: 'Courses & certifications',
     studies: [
       {
-        title: 'Advanced Technical Degree in Software Development',
-        institution: 'Instituto Superior Villa del Rosario (ISVdR)',
-        status: 'Completed',
-        detail:
-          'Technical training in software development, databases, programming and application architecture.',
-      },
-      {
-        title: 'Bachelor’s Degree in Computer Science',
+        title: 'Bachelor’s in Information Systems',
         institution: 'Universidad Blas Pascal (UBP)',
         status: 'In progress',
-        detail:
-          'Deeper focus on systems, software engineering and technology infrastructure applied to digital products.',
+        detail: 'Córdoba, Argentina · 2026 – Present. Systems, software engineering and applied infrastructure.',
+      },
+      {
+        title: 'Software Development Technician',
+        institution: 'Instituto Superior Villa del Rosario (ISVdR)',
+        status: 'Completed',
+        detail: 'Villa del Rosario, Córdoba · 2023 – 2025. Software development, databases and programming.',
       },
     ],
     certs: [
       {
-        title: 'AWS Certified Cloud Practitioner',
-        issuer: 'Amazon Web Services',
-        detail:
-          'Cloud computing fundamentals, core AWS services, security, pricing and cloud architecture basics.',
+        title: 'React Course',
+        issuer: 'CoderHouse · 2025',
+        detail: 'React fundamentals and practice for modern UIs and reusable components.',
       },
       {
-        title: 'PostgreSQL',
-        issuer: 'Official certification',
-        detail:
-          'Modeling, querying, performance and administration best practices for PostgreSQL in real environments.',
+        title: 'AWS Cloud Practitioner Prep',
+        issuer: 'Udemy · 2026',
+        detail: 'Preparation course toward the AWS Cloud Practitioner certification (cloud fundamentals).',
+      },
+      {
+        title: 'Cambridge English KET',
+        issuer: 'Cambridge · 2020',
+        detail: 'English A2 certified (Key English Test).',
       },
     ],
   },
   tech: {
     title: 'Technologies',
-    columns: ['Frontend', 'Backend & Languages', 'Databases', 'DevOps & Tools'],
+    columns: ['Frontend', 'Backend', 'Data', 'Tools'],
   },
   projects: {
     title: 'Projects',
-    subtitle: 'Real products: from the problem to the solution and measurable impact.',
+    subtitle: 'Real and personal products: from the problem to the solution and its impact.',
     problem: 'Problem',
     solution: 'Solution',
     impact: 'Impact',
+    estimated: 'estimated',
+    featured: 'Featured',
+    filterAll: 'All',
     viewProject: 'View Project',
     viewCode: 'View Code',
     zoom: 'Enlarge',
@@ -250,66 +304,80 @@ const en: Translations = {
     prevImage: 'Previous image',
     nextImage: 'Next image',
     gallery: 'Gallery',
+    emptyFilter: 'No projects match that filter.',
     items: [
-      {
-        title: 'Fénix',
-        problem:
-          'The club lacked a digital presence that matched the night: no clear site to show the line-up, news, or a direct path to buy tickets.',
-        solution:
-          'High-impact nightlife landing with cyan/magenta aesthetics, an immersive hero, navigation to About, Experience, Line-up, News and Contact, plus ticket CTAs.',
-        impact:
-          'Club pitch understood in under 5 seconds with a direct path to tickets/line-up, and load optimized for Core Web Vitals > 90.',
-      },
-      {
-        title: 'MobiHouse',
-        problem:
-          'Finding and comparing properties was slow and confusing: weak filters, no useful map and little clarity on each listing’s status.',
-        solution:
-          'Real-estate platform with a high-impact landing, filterable catalog, favorites and an interactive Leaflet map with synced pins and sidebar.',
-        impact:
-          'Filter + map discovery in one view: ~60% estimated reduction in time to find a relevant property vs. listings without geographic context.',
-      },
       {
         title: 'Fobi Bike',
         problem:
-          'The shop tracked inventory and sales in scattered tools, without clear metrics or a fast way to check stock or register operations.',
+          'The shop tracked inventory and sales in scattered tools, without clear metrics or a fast way to check stock at the counter.',
         solution:
-          'Management dashboard with inventory (1400+ products), income control, automatic stock deduction and a Groq-powered AI chat assistant.',
+          'Inventory and sales system (real client) with CRUD, cross filters, metrics panel and a natural-language assistant (Groq).',
         impact:
-          'Unified management of 1,400+ products, stock deducted on sale confirmation, and inventory/sales queries in natural language within seconds.',
+          'Unified management of 1,400+ products, stock deducted on sale confirmation, and inventory/sales queries in seconds.',
       },
       {
         title: 'Matchear',
         problem:
-          'Booking courts and organizing tournaments relied on chats and spreadsheets: unclear slots, low conversion and friction to confirm turns.',
+          'Booking courts relied on WhatsApp or calls: unclear slots and friction confirming turns.',
         solution:
-          'Booking platform with day/time selection, payment summary, deposit flow and a guided tournament setup with clear steps.',
+          'Web app (React + Firebase) to view availability, book slots and manage the court in one user/admin flow.',
         impact:
-          'Full booking in under 2 minutes (day + slot + deposit) and tournament setup in 4 guided steps—no spreadsheets or WhatsApp back-and-forth.',
-      },
-      {
-        title: 'Ironcore Gym',
-        problem:
-          'The gym lacked a modern website and an ops panel for members, payments and attendance: sign-ups and daily control relied on manual processes.',
-        solution:
-          'Dark-themed site with membership plans (Basic, Full, Premium), enrollment CTAs and an admin dashboard with KPIs, charts, shift occupancy and latest sign-ups.',
-        impact:
-          'Real-time KPI panel (active members, monthly revenue, daily attendance and pending payments) plus 3 commercial plans ready for conversion.',
+          'Full booking in under 2 minutes (day + slot + deposit), replacing chat back-and-forth (estimated).',
       },
       {
         title: 'FerroHogar',
         problem:
           'A hardware store needed to sell online and manage catalog, orders and stock without a clear storefront or backoffice.',
         solution:
-          'Full e-commerce: home, filterable catalog, cart and an admin panel with sales, stock alerts, orders and analytics.',
+          'E-commerce with home, filterable catalog, cart and an admin panel with sales, stock alerts and orders.',
         impact:
-          '40+ product catalog with advanced filters and an admin with daily/monthly metrics, low-stock alerts and order tracking in one panel.',
+          '40+ product catalog with advanced filters and daily/monthly metrics in one admin panel.',
+      },
+      {
+        title: 'MobiHouse',
+        problem:
+          'Finding and comparing properties was slow: weak filters and no useful map.',
+        solution:
+          'Real-estate platform with filterable catalog, favorites and a synced interactive Leaflet map.',
+        impact:
+          'Filter + map discovery in one view: ~60% less time to find a relevant property vs. flat listings (estimated).',
+      },
+      {
+        title: 'Ironcore Gym',
+        problem:
+          'The gym lacked a modern website and a panel for members, payments and attendance.',
+        solution:
+          'Dark landing with plans (Basic, Full, Premium) and an admin dashboard with KPIs, charts and shift occupancy.',
+        impact:
+          '3 commercial plans ready for conversion and member/revenue/attendance KPIs on one screen.',
+      },
+      {
+        title: 'Fénix',
+        problem:
+          'The club lacked a clear site for line-up, news and ticket purchase.',
+        solution:
+          'High-impact nightlife landing with immersive hero, experience/line-up sections and ticket CTAs.',
+        impact:
+          'Pitch understood in under 5 seconds with a direct path to tickets/line-up (estimated reading time).',
       },
     ],
   },
   contact: {
     title: 'Contact',
-    note: 'Open to new opportunities! Connect with me through these platforms.',
+    note: 'Open to my first formal junior role and freelance projects. Reach me by email or LinkedIn.',
+    writeMe: 'Email me',
+    downloadCv: 'Download CV (PDF)',
+    available: 'Open to opportunities',
+  },
+  command: {
+    placeholder: 'Search section, action…',
+    hint: 'Ctrl K',
+    hintMac: '⌘ K',
+    empty: 'No results',
+    groups: {
+      navigate: 'Navigate',
+      actions: 'Actions',
+    },
   },
   footer: {
     rights: 'All rights reserved.',

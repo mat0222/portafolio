@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
-import { Menu, X, Languages } from 'lucide-react'
+import { Download, Menu, X, Languages } from 'lucide-react'
 import { useLanguage } from '../i18n/useLanguage'
+import CommandPalette from './CommandPalette'
 import './Navbar.css'
 
 export default function Navbar() {
@@ -38,6 +39,18 @@ export default function Navbar() {
         </nav>
 
         <div className="navbar__actions">
+          <CommandPalette />
+
+          <a
+            href="/Mateo-Liendo-CV.pdf"
+            className="navbar__cv"
+            download
+            title={t.nav.downloadCv}
+          >
+            <Download size={14} />
+            <span>CV</span>
+          </a>
+
           <button
             type="button"
             className="navbar__lang"
@@ -66,6 +79,14 @@ export default function Navbar() {
             {link.label}
           </a>
         ))}
+        <a
+          href="/Mateo-Liendo-CV.pdf"
+          className="navbar__mobile-cv"
+          download
+          onClick={() => setOpen(false)}
+        >
+          {t.nav.downloadCv}
+        </a>
       </div>
     </header>
   )

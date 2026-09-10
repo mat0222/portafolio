@@ -10,15 +10,37 @@ export default function Experience() {
         <h2 className="section-title">{t.experience.title}</h2>
         <hr className="section-divider" />
 
-        <article className="experience__item">
-          <h3 className="experience__role">{t.experience.role}</h3>
-          <p className="experience__summary">{t.experience.summary}</p>
-          <ul className="experience__list">
-            {t.experience.bullets.map((bullet) => (
-              <li key={bullet}>{bullet}</li>
+        <div className="experience__layout">
+          <div className="experience__roles">
+            {t.experience.items.map((item) => (
+              <article key={item.role} className="experience__item">
+                <div className="experience__item-top">
+                  <h3 className="experience__role">{item.role}</h3>
+                  <span className="experience__period">{item.period}</span>
+                </div>
+                <p className="experience__location">{item.location}</p>
+                <p className="experience__summary">{item.summary}</p>
+                <ul className="experience__list">
+                  {item.bullets.map((bullet) => (
+                    <li key={bullet}>{bullet}</li>
+                  ))}
+                </ul>
+              </article>
             ))}
-          </ul>
-        </article>
+          </div>
+
+          <aside className="experience__milestones">
+            <h3 className="experience__milestones-title">{t.experience.milestonesTitle}</h3>
+            <ol className="experience__timeline">
+              {t.experience.milestones.map((m) => (
+                <li key={`${m.year}-${m.label}`}>
+                  <span className="experience__timeline-year">{m.year}</span>
+                  <span className="experience__timeline-label">{m.label}</span>
+                </li>
+              ))}
+            </ol>
+          </aside>
+        </div>
       </div>
     </section>
   )

@@ -8,15 +8,24 @@ export default function Hero() {
     <section id="inicio" className="hero section">
       <div className="container hero__grid">
         <div className="hero__content">
-          <h1 className="hero__title reveal">
+          <p className="hero__badge reveal">{t.nav.available}</p>
+          <h1 className="hero__title reveal reveal-delay-1">
             {t.hero.titleA}
             <span className="hero__title-sep"> | </span>
             {t.hero.titleB}
           </h1>
-          <p className="hero__text reveal reveal-delay-1">{t.hero.text}</p>
-          <a href="#proyectos" className="btn btn-primary reveal reveal-delay-2">
-            {t.hero.cta}
-          </a>
+          <p className="hero__text reveal reveal-delay-2">{t.hero.text}</p>
+          <div className="hero__actions reveal reveal-delay-3">
+            <a href="#proyectos" className="btn btn-primary">
+              {t.hero.cta}
+            </a>
+            <a href="/Mateo-Liendo-CV.pdf" className="btn btn-secondary" download>
+              {t.hero.ctaCv}
+            </a>
+            <a href="#contacto" className="btn btn-secondary">
+              {t.hero.ctaContact}
+            </a>
+          </div>
         </div>
 
         <div className="hero__media reveal reveal-delay-1">
