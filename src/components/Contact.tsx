@@ -1,4 +1,4 @@
-import { Download, Mail } from 'lucide-react'
+import { Download, Mail, MessageCircle } from 'lucide-react'
 import { useLanguage } from '../i18n/useLanguage'
 import './Contact.css'
 
@@ -89,6 +89,15 @@ export default function Contact() {
           <a href="mailto:mateoliendo022@gmail.com" className="btn btn-primary">
             <Mail size={16} />
             {t.contact.writeMe}
+          </a>
+          <a
+            href="https://wa.me/5493573414204"
+            className="btn btn-secondary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MessageCircle size={16} />
+            {t.contact.whatsapp}
           </a>
           <a href="/Mateo-Liendo-CV.pdf" className="btn btn-secondary" download>
             <Download size={16} />

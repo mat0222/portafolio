@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { Download, Menu, X, Languages } from 'lucide-react'
 import { useLanguage } from '../i18n/useLanguage'
 import CommandPalette from './CommandPalette'
@@ -8,6 +9,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const { lang, toggle, t } = useLanguage()
+  const location = useLocation()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12)
@@ -23,16 +25,23 @@ export default function Navbar() {
     }
   }, [open])
 
+  const resolveHref = (href: string) => {
+    if (href.startsWith('/#')) {
+      return location.pathname === '/' ? href.slice(1) : href
+    }
+    return href
+  }
+
   return (
     <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="container navbar__inner">
-        <a href="#inicio" className="navbar__brand" onClick={() => setOpen(false)}>
+        <Link to="/" className="navbar__brand" onClick={() => setOpen(false)}>
           Mateo Liendo <span>| Portfolio</span>
-        </a>
+        </Link>
 
         <nav className="navbar__links" aria-label="Navegación principal">
           {t.nav.links.map((link) => (
-            <a key={link.href} href={link.href}>
+            <a key={link.href} href={resolveHref(link.href)}>
               {link.label}
             </a>
           ))}
@@ -75,7 +84,11 @@ export default function Navbar() {
 
       <div className={`navbar__mobile ${open ? 'navbar__mobile--open' : ''}`}>
         {t.nav.links.map((link) => (
-          <a key={link.href} href={link.href} onClick={() => setOpen(false)}>
+          <a
+            key={link.href}
+            href={resolveHref(link.href)}
+            onClick={() => setOpen(false)}
+          >
             {link.label}
           </a>
         ))}

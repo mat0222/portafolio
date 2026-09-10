@@ -26,9 +26,14 @@ export default function CommandPalette() {
       id: link.href,
       group: 'navigate' as const,
       label: link.label,
-      hint: link.href,
+      hint: link.href.replace('/#', '#'),
       run: () => {
-        document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' })
+        const hash = link.href.includes('#') ? `#${link.href.split('#')[1]}` : link.href
+        if (window.location.pathname !== '/') {
+          window.location.href = `/${hash}`
+          return
+        }
+        document.querySelector(hash)?.scrollIntoView({ behavior: 'smooth' })
       },
     }))
 
@@ -39,6 +44,24 @@ export default function CommandPalette() {
         label: t.nav.switchLang,
         hint: lang === 'es' ? 'EN' : 'ES',
         run: toggle,
+      },
+      {
+        id: 'copy-email',
+        group: 'actions',
+        label: t.command.copyEmail,
+        hint: 'clipboard',
+        run: async () => {
+          await navigator.clipboard.writeText('mateoliendo022@gmail.com')
+        },
+      },
+      {
+        id: 'fobi',
+        group: 'actions',
+        label: t.command.openFobi,
+        hint: 'demo',
+        run: () => {
+          window.open('https://mat0222.github.io/fobibike/', '_blank', 'noopener,noreferrer')
+        },
       },
       {
         id: 'cv',
@@ -76,25 +99,42 @@ export default function CommandPalette() {
     )
   }, [items, query])
 
+  const closePalette = () => {
+    setOpen(false)
+    setQuery('')
+    setActive(0)
+  }
+
+  const openPalette = () => {
+    setQuery('')
+    setActive(0)
+    setOpen(true)
+  }
+
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       const meta = e.metaKey || e.ctrlKey
       if (meta && e.key.toLowerCase() === 'k') {
         e.preventDefault()
-        setOpen((v) => !v)
+        setOpen((v) => {
+          if (v) {
+            setQuery('')
+            setActive(0)
+            return false
+          }
+          setQuery('')
+          setActive(0)
+          return true
+        })
       }
-      if (e.key === 'Escape') setOpen(false)
+      if (e.key === 'Escape') closePalette()
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [])
 
   useEffect(() => {
-    if (!open) {
-      setQuery('')
-      setActive(0)
-      return
-    }
+    if (!open) return
     const id = window.setTimeout(() => inputRef.current?.focus(), 10)
     document.body.style.overflow = 'hidden'
     return () => {
@@ -103,12 +143,8 @@ export default function CommandPalette() {
     }
   }, [open])
 
-  useEffect(() => {
-    setActive(0)
-  }, [query])
-
   const runItem = (item: CommandItem) => {
-    setOpen(false)
+    closePalette()
     item.run()
   }
 
@@ -132,7 +168,7 @@ export default function CommandPalette() {
       <button
         type="button"
         className="command-trigger"
-        onClick={() => setOpen(true)}
+        onClick={openPalette}
         aria-label={t.command.placeholder}
         title={isMac ? t.command.hintMac : t.command.hint}
       >
@@ -141,14 +177,17 @@ export default function CommandPalette() {
       </button>
 
       {open && (
-        <div className="command" role="dialog" aria-modal="true" onClick={() => setOpen(false)}>
+        <div className="command" role="dialog" aria-modal="true" onClick={closePalette}>
           <div className="command__panel" onClick={(e) => e.stopPropagation()}>
             <div className="command__input-wrap">
               <Search size={18} />
               <input
                 ref={inputRef}
                 value={query}
-                onChange={(e) => setQuery(e.target.value)}
+                onChange={(e) => {
+                  setQuery(e.target.value)
+                  setActive(0)
+                }}
                 onKeyDown={onInputKey}
                 placeholder={t.command.placeholder}
                 aria-label={t.command.placeholder}

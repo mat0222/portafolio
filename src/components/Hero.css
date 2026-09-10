@@ -43,7 +43,14 @@
   border: 1px solid rgba(74, 222, 128, 0.25);
   padding: 0.4rem 0.8rem;
   border-radius: 999px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero__seeking {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 0.85rem;
 }
 
 .hero__badge::before {

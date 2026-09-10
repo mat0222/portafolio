@@ -3,12 +3,12 @@ export type Language = 'es' | 'en'
 const es = {
   nav: {
     links: [
-      { href: '#sobre-mi', label: 'Sobre Mí' },
-      { href: '#experiencia', label: 'Experiencia' },
-      { href: '#educacion', label: 'Educación' },
-      { href: '#tecnologias', label: 'Tecnologías' },
-      { href: '#proyectos', label: 'Proyectos' },
-      { href: '#contacto', label: 'Contacto' },
+      { href: '/#sobre-mi', label: 'Sobre Mí' },
+      { href: '/#experiencia', label: 'Experiencia' },
+      { href: '/#proceso', label: 'Cómo trabajo' },
+      { href: '/#educacion', label: 'Educación' },
+      { href: '/#proyectos', label: 'Proyectos' },
+      { href: '/#contacto', label: 'Contacto' },
     ],
     openMenu: 'Abrir menú',
     closeMenu: 'Cerrar menú',
@@ -17,16 +17,62 @@ const es = {
     available: 'Disponible para oportunidades',
   },
   hero: {
-    titleA: 'Desarrollador Web Junior',
-    titleB: 'React · JavaScript · PHP',
-    text: 'Construyo sitios y sistemas a medida para comercios locales. Busco mi primer rol formal junior, con base en React, TypeScript, PHP y productos ya en producción.',
-    cta: 'Ver Proyectos',
+    titleA: 'Desarrollador Web (React / PHP)',
+    titleB: 'Sistemas en producción para comercios',
+    text: 'Diseño y entrego sitios y paneles que se usan de verdad: inventario, reservas y e-commerce. Busco un rol junior / SSR con impacto en producto.',
+    seeking: 'Busco rol junior · Córdoba / remoto AR',
+    cta: 'Ver caso FobiBike',
+    ctaProjects: 'Ver proyectos',
     ctaCv: 'Descargar CV',
     ctaContact: 'Contactar',
   },
   about: {
     title: 'Sobre Mí',
-    text: 'Soy desarrollador web junior de Córdoba, Argentina. Me formé como Técnico en Desarrollo de Software (ISVdR) y curso la Licenciatura en Sistemas de Información en la UBP. Me apasiona pasar de un requerimiento de negocio a una interfaz simple de operar: inventarios, reservas, landings y paneles. Trabajo con React, JavaScript/TypeScript, PHP, MySQL y Firebase, y sigo profundizando en cloud (preparación AWS Cloud Practitioner). Español nativo e inglés A2 (Cambridge KET).',
+    text: 'Soy desarrollador web de Córdoba, Argentina. Técnico en Desarrollo de Software (ISVdR) y estudiante de Licenciatura en Sistemas de Información (UBP). Me enfoco en convertir un requerimiento de negocio en una interfaz simple de operar en el día a día. Stack principal: React, TypeScript, PHP, MySQL y Firebase. Español nativo. Inglés A2 (Cambridge KET, 2020) — estudiando hacia B1 para roles bilingües.',
+  },
+  featured: {
+    id: 'caso-fobibike',
+    eyebrow: 'Caso destacado · Cliente real',
+    title: 'FobiBike — inventario y ventas en mostrador',
+    problemLabel: 'Problema',
+    problem:
+      'La bicicletería consultaba stock y ventas de forma manual y dispersa: lento en mostrador y sin métricas claras.',
+    solutionLabel: 'Solución',
+    solution:
+      'Sistema a medida (PHP, MySQL, JavaScript) con CRUD, filtros cruzados, panel de ingresos y asistente IA (Groq) para consultar stock e ingresos en lenguaje natural.',
+    impactLabel: 'En producción',
+    kpis: [
+      { value: '1.400+', label: 'Productos gestionados' },
+      { value: 'Stock auto', label: 'Descuento al confirmar venta' },
+      { value: 'IA', label: 'Consultas en lenguaje natural' },
+    ],
+    stack: ['PHP', 'MySQL', 'JavaScript', 'Groq'],
+    ctaDemo: 'Abrir demo',
+    ctaCode: 'Ver código',
+    ctaCase: 'Case study completo',
+    note: 'En uso para consultas de stock en mostrador.',
+  },
+  process: {
+    title: 'Cómo trabajo',
+    subtitle: 'Proceso simple para reducir riesgo en entregas freelance y roles junior.',
+    steps: [
+      {
+        title: 'Discovery',
+        text: 'Escucho el problema del negocio (mostrador, reservas, ventas) y qué tiene que ser simple de operar.',
+      },
+      {
+        title: 'Alcance',
+        text: 'Defino MVP, pantallas y datos. Evito scope creep: primero lo que desbloquea el día a día.',
+      },
+      {
+        title: 'Entrega',
+        text: 'UI usable + validaciones. Itero con el cliente sobre flujos reales, no mockups eternos.',
+      },
+      {
+        title: 'Deploy',
+        text: 'Publico en Vercel/Netlify/GitHub Pages, dominio y SEO básico. Dejo el sistema listo para usarse.',
+      },
+    ],
   },
   experience: {
     title: 'Experiencia',
@@ -38,9 +84,9 @@ const es = {
         summary:
           'Desarrollo sitios y sistemas a medida para comercios locales con React, TypeScript, PHP y MySQL.',
         bullets: [
-          'Implementé para FobiBike un sistema de inventario con CRUD y búsqueda por categoría, tipo, proveedor y disponibilidad, pensado para consultas de stock en mostrador.',
-          'Publico y mantengo sitios en producción (Vercel/Netlify): deploys, dominio y ajustes de SEO básico.',
-          'Tomo requerimientos con el cliente, defino alcance y entrego interfaces simples de operar en el día a día.',
+          'Cliente real FobiBike: inventario con CRUD y búsqueda por categoría, tipo, proveedor y disponibilidad para mostrador.',
+          'Publico y mantengo sitios en producción (Vercel/Netlify): deploys, dominio y SEO básico.',
+          'Tomo requerimientos, defino alcance y entrego interfaces simples de operar en el día a día.',
         ],
       },
     ],
@@ -84,7 +130,7 @@ const es = {
       {
         title: 'Cambridge English KET',
         issuer: 'Cambridge · 2020',
-        detail: 'Inglés nivel A2 certificado (Key English Test).',
+        detail: 'Inglés A2 certificado. En camino a B1 para roles bilingües.',
       },
     ],
   },
@@ -99,6 +145,7 @@ const es = {
     solution: 'Solución',
     impact: 'Impacto',
     estimated: 'estimado',
+    production: 'en producción',
     featured: 'Destacado',
     filterAll: 'Todos',
     viewProject: 'Ver Proyecto',
@@ -169,10 +216,43 @@ const es = {
       },
     ],
   },
+  caseStudy: {
+    back: 'Volver al portfolio',
+    title: 'Case study — FobiBike',
+    subtitle: 'Sistema de inventario y ventas para bicicletería (cliente real).',
+    sections: [
+      {
+        title: 'Contexto',
+        body: 'FobiBike necesitaba dejar de depender de consultas manuales de stock en mostrador. El objetivo: un panel simple para buscar productos, registrar ventas y ver ingresos.',
+      },
+      {
+        title: 'Arquitectura',
+        body: 'Backend en PHP con MySQL para persistencia de productos, ventas y stock. Frontend con JavaScript para filtros y flujos de mostrador. Evolución posterior: métricas e integración con asistente Groq para consultas en lenguaje natural.',
+      },
+      {
+        title: 'Modelo de datos (resumen)',
+        body: 'Productos (código, categoría, tipo, proveedor, precios, stock) · Ventas (fecha, ítems, pago, total) · Movimientos de stock al confirmar venta. Filtros cruzados por categoría, tipo, proveedor y disponibilidad.',
+      },
+      {
+        title: 'Trade-offs',
+        body: 'Elegí PHP + MySQL por velocidad de entrega para un comercio local y hosting simple. React no era necesario para el MVP de mostrador; se priorizó usabilidad y tiempo a producción. La capa de IA se agregó después, sin reescribir el núcleo.',
+      },
+      {
+        title: 'Resultado',
+        body: 'Sistema en uso para consultas de stock y registro de ventas. 1.400+ productos cargados, descuento automático de stock y panel de ingresos. Demo y código públicos para revisión técnica.',
+      },
+    ],
+    videoTitle: 'Walkthrough (60–90s)',
+    videoPlaceholder:
+      'Próximamente: Loom con stock → venta → métricas → chat Groq. Mientras tanto, abrí la demo.',
+    ctaDemo: 'Abrir demo en vivo',
+    ctaCode: 'GitHub',
+  },
   contact: {
     title: 'Contacto',
-    note: 'Abierto a mi primer rol formal junior y a proyectos freelance. Escribime por email o LinkedIn.',
-    writeMe: 'Escribime',
+    note: 'Abierto a rol junior / SSR y proyectos freelance. Escribime por email, WhatsApp o LinkedIn.',
+    writeMe: 'Email',
+    whatsapp: 'WhatsApp',
     downloadCv: 'Descargar CV (PDF)',
     available: 'Disponible para oportunidades',
   },
@@ -181,6 +261,9 @@ const es = {
     hint: 'Ctrl K',
     hintMac: '⌘ K',
     empty: 'Sin resultados',
+    copyEmail: 'Copiar email',
+    openFobi: 'Abrir demo FobiBike',
+    copied: 'Email copiado',
     groups: {
       navigate: 'Navegar',
       actions: 'Acciones',
@@ -196,12 +279,12 @@ export type Translations = typeof es
 const en: Translations = {
   nav: {
     links: [
-      { href: '#sobre-mi', label: 'About Me' },
-      { href: '#experiencia', label: 'Experience' },
-      { href: '#educacion', label: 'Education' },
-      { href: '#tecnologias', label: 'Technologies' },
-      { href: '#proyectos', label: 'Projects' },
-      { href: '#contacto', label: 'Contact' },
+      { href: '/#sobre-mi', label: 'About Me' },
+      { href: '/#experiencia', label: 'Experience' },
+      { href: '/#proceso', label: 'How I work' },
+      { href: '/#educacion', label: 'Education' },
+      { href: '/#proyectos', label: 'Projects' },
+      { href: '/#contacto', label: 'Contact' },
     ],
     openMenu: 'Open menu',
     closeMenu: 'Close menu',
@@ -210,16 +293,62 @@ const en: Translations = {
     available: 'Open to opportunities',
   },
   hero: {
-    titleA: 'Junior Web Developer',
-    titleB: 'React · JavaScript · PHP',
-    text: 'I build custom sites and systems for local businesses. I’m looking for my first formal junior role, with hands-on React, TypeScript, PHP and products already in production.',
-    cta: 'View Projects',
+    titleA: 'Web Developer (React / PHP)',
+    titleB: 'Production systems for local businesses',
+    text: 'I design and ship sites and dashboards that get used for real: inventory, bookings and e-commerce. Looking for a junior / SSR role with product impact.',
+    seeking: 'Open to junior roles · Córdoba / remote AR',
+    cta: 'See FobiBike case',
+    ctaProjects: 'View projects',
     ctaCv: 'Download CV',
     ctaContact: 'Contact',
   },
   about: {
     title: 'About Me',
-    text: 'I’m a junior web developer from Córdoba, Argentina. I trained as a Software Development Technician (ISVdR) and I’m pursuing a Bachelor’s in Information Systems at UBP. I enjoy turning business requirements into interfaces that are simple to operate day to day: inventory, bookings, landings and dashboards. I work with React, JavaScript/TypeScript, PHP, MySQL and Firebase, and I’m deepening cloud skills (AWS Cloud Practitioner prep). Native Spanish and English A2 (Cambridge KET).',
+    text: 'I’m a web developer from Córdoba, Argentina. Software Development Technician (ISVdR) and Information Systems student (UBP). I turn business requirements into interfaces that are simple to operate day to day. Main stack: React, TypeScript, PHP, MySQL and Firebase. Native Spanish. English A2 (Cambridge KET, 2020) — studying toward B1 for bilingual roles.',
+  },
+  featured: {
+    id: 'caso-fobibike',
+    eyebrow: 'Featured case · Real client',
+    title: 'FobiBike — counter inventory & sales',
+    problemLabel: 'Problem',
+    problem:
+      'The bike shop checked stock and sales manually across scattered tools: slow at the counter and no clear metrics.',
+    solutionLabel: 'Solution',
+    solution:
+      'Custom system (PHP, MySQL, JavaScript) with CRUD, cross filters, income panel and a Groq AI assistant for natural-language stock/sales queries.',
+    impactLabel: 'In production',
+    kpis: [
+      { value: '1,400+', label: 'Products managed' },
+      { value: 'Auto stock', label: 'Deducted on sale confirm' },
+      { value: 'AI', label: 'Natural-language queries' },
+    ],
+    stack: ['PHP', 'MySQL', 'JavaScript', 'Groq'],
+    ctaDemo: 'Open demo',
+    ctaCode: 'View code',
+    ctaCase: 'Full case study',
+    note: 'Used for counter stock lookups in production.',
+  },
+  process: {
+    title: 'How I work',
+    subtitle: 'A simple process to reduce delivery risk for freelance and junior roles.',
+    steps: [
+      {
+        title: 'Discovery',
+        text: 'I listen to the business problem (counter, bookings, sales) and what must stay simple to operate.',
+      },
+      {
+        title: 'Scope',
+        text: 'I define MVP, screens and data. Avoid scope creep: ship what unblocks day-to-day first.',
+      },
+      {
+        title: 'Delivery',
+        text: 'Usable UI + validations. Iterate with the client on real flows, not endless mockups.',
+      },
+      {
+        title: 'Deploy',
+        text: 'Ship on Vercel/Netlify/GitHub Pages, domain and basic SEO. Leave the system ready to use.',
+      },
+    ],
   },
   experience: {
     title: 'Experience',
@@ -231,9 +360,9 @@ const en: Translations = {
         summary:
           'I build custom sites and systems for local businesses with React, TypeScript, PHP and MySQL.',
         bullets: [
-          'Built FobiBike’s inventory system with CRUD and search by category, type, supplier and availability for counter stock checks.',
+          'Real client FobiBike: inventory with CRUD and search by category, type, supplier and availability for the counter.',
           'Ship and maintain production sites (Vercel/Netlify): deploys, domains and basic SEO.',
-          'Gather requirements with clients, define scope and deliver interfaces that are simple to operate day to day.',
+          'Gather requirements, define scope and deliver interfaces that are simple to operate day to day.',
         ],
       },
     ],
@@ -277,7 +406,7 @@ const en: Translations = {
       {
         title: 'Cambridge English KET',
         issuer: 'Cambridge · 2020',
-        detail: 'English A2 certified (Key English Test).',
+        detail: 'English A2 certified. Working toward B1 for bilingual roles.',
       },
     ],
   },
@@ -292,6 +421,7 @@ const en: Translations = {
     solution: 'Solution',
     impact: 'Impact',
     estimated: 'estimated',
+    production: 'in production',
     featured: 'Featured',
     filterAll: 'All',
     viewProject: 'View Project',
@@ -362,10 +492,43 @@ const en: Translations = {
       },
     ],
   },
+  caseStudy: {
+    back: 'Back to portfolio',
+    title: 'Case study — FobiBike',
+    subtitle: 'Inventory and sales system for a bike shop (real client).',
+    sections: [
+      {
+        title: 'Context',
+        body: 'FobiBike needed to stop relying on manual stock checks at the counter. Goal: a simple panel to search products, register sales and see income.',
+      },
+      {
+        title: 'Architecture',
+        body: 'PHP backend with MySQL for products, sales and stock. JavaScript frontend for filters and counter flows. Later evolution: metrics and Groq assistant for natural-language queries.',
+      },
+      {
+        title: 'Data model (summary)',
+        body: 'Products (SKU, category, type, supplier, prices, stock) · Sales (date, items, payment, total) · Stock movements on sale confirm. Cross filters by category, type, supplier and availability.',
+      },
+      {
+        title: 'Trade-offs',
+        body: 'I chose PHP + MySQL for fast delivery to a local business and simple hosting. React wasn’t required for the counter MVP; usability and time-to-production came first. AI was added later without rewriting the core.',
+      },
+      {
+        title: 'Outcome',
+        body: 'System used for stock lookups and sales entry. 1,400+ products loaded, automatic stock deduction and income panel. Public demo and code for technical review.',
+      },
+    ],
+    videoTitle: 'Walkthrough (60–90s)',
+    videoPlaceholder:
+      'Coming soon: Loom covering stock → sale → metrics → Groq chat. Meanwhile, open the live demo.',
+    ctaDemo: 'Open live demo',
+    ctaCode: 'GitHub',
+  },
   contact: {
     title: 'Contact',
-    note: 'Open to my first formal junior role and freelance projects. Reach me by email or LinkedIn.',
-    writeMe: 'Email me',
+    note: 'Open to junior / SSR roles and freelance. Reach me by email, WhatsApp or LinkedIn.',
+    writeMe: 'Email',
+    whatsapp: 'WhatsApp',
     downloadCv: 'Download CV (PDF)',
     available: 'Open to opportunities',
   },
@@ -374,6 +537,9 @@ const en: Translations = {
     hint: 'Ctrl K',
     hintMac: '⌘ K',
     empty: 'No results',
+    copyEmail: 'Copy email',
+    openFobi: 'Open FobiBike demo',
+    copied: 'Email copied',
     groups: {
       navigate: 'Navigate',
       actions: 'Actions',

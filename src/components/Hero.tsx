@@ -9,6 +9,7 @@ export default function Hero() {
       <div className="container hero__grid">
         <div className="hero__content">
           <p className="hero__badge reveal">{t.nav.available}</p>
+          <p className="hero__seeking reveal">{t.hero.seeking}</p>
           <h1 className="hero__title reveal reveal-delay-1">
             {t.hero.titleA}
             <span className="hero__title-sep"> | </span>
@@ -17,7 +18,7 @@ export default function Hero() {
           <p className="hero__text reveal reveal-delay-2">{t.hero.text}</p>
           <div className="hero__actions reveal reveal-delay-3">
             <a href="#proyectos" className="btn btn-primary">
-              {t.hero.cta}
+              {t.hero.ctaProjects}
             </a>
             <a href="/Mateo-Liendo-CV.pdf" className="btn btn-secondary" download>
               {t.hero.ctaCv}

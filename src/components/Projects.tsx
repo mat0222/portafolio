@@ -307,7 +307,11 @@ export default function Projects() {
                       <div className="project-case__step project-case__step--impact">
                         <span>
                           {t.projects.impact}
-                          {project.estimated ? ` · ${t.projects.estimated}` : ''}
+                          {project.estimated
+                            ? ` · ${t.projects.estimated}`
+                            : project.filters.includes('Cliente real')
+                              ? ` · ${t.projects.production}`
+                              : ''}
                         </span>
                         <p>{project.impact}</p>
                       </div>
