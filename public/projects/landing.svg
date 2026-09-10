@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101623"/>
+      <stop offset="1" stop-color="#1a2540"/>
+    </linearGradient>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4ade80" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#4ade80" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect x="0" y="0" width="800" height="44" fill="#141b2b"/>
+  <circle cx="24" cy="22" r="6" fill="#ef4444"/>
+  <circle cx="46" cy="22" r="6" fill="#f59e0b"/>
+  <circle cx="68" cy="22" r="6" fill="#4ade80"/>
+  <rect x="0" y="44" width="800" height="220" fill="url(#hero)"/>
+  <rect x="80" y="110" width="360" height="26" rx="6" fill="#e2e8f0"/>
+  <rect x="80" y="150" width="280" height="12" rx="4" fill="#64748b"/>
+  <rect x="80" y="172" width="240" height="12" rx="4" fill="#64748b"/>
+  <rect x="80" y="210" width="140" height="38" rx="6" fill="#4ade80"/>
+  <rect x="520" y="90" width="200" height="150" rx="12" fill="#101827" stroke="#243247"/>
+  <rect x="80" y="310" width="200" height="120" rx="10" fill="#101827" stroke="#243247"/>
+  <rect x="300" y="310" width="200" height="120" rx="10" fill="#101827" stroke="#243247"/>
+  <rect x="520" y="310" width="200" height="120" rx="10" fill="#101827" stroke="#243247"/>
+  <text x="400" y="475" font-family="sans-serif" font-size="20" fill="#e2e8f0" font-weight="bold" text-anchor="middle">Landing Page Responsive</text>
+</svg>
